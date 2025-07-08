@@ -32,3 +32,30 @@ body.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
 }
+
+.prose img,
+.markdown-body img {
+  max-width: 70%;
+  /* 可自行調整 60-80% 看感覺 */
+  margin: 1.5rem auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+}
+
+.prose h2 {
+  font-size: 1.3em;
+  margin-top: 2.2em;
+  margin-bottom: 1em;
+  font-weight: 700;
+  color: #fff;
+  border-left: 4px solid #ffe066;
+  padding-left: 0.7em;
+}
+
+.prose hr {
+  margin: 2em 0;
+  border-color: #333;
+  opacity: 0.5;
+}
