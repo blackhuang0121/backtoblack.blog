@@ -22,13 +22,13 @@ export default function Header() {
                 {/* row2: Nav 按鈕列（下方一行，置中） */}
                 <nav className="flex items-center justify-center gap-8 mt-8">
                     <div className="flex gap-8">
-                        <a href="#trips" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
+                        <a href="/category/trips" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
                             🧳 旅遊 Trips
                         </a>
                         <a href="#photos" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
                             📸 攝影 Photos
                         </a>
-                        <a href="#essays" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
+                        <a href="/category/essays" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
                             🖋️ 隨筆 Essays
                         </a>
                         <a href="/about" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
