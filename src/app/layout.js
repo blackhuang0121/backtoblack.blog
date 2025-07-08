@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Frontend Projects Created by Howard Huang",
-  description: "Howard Huang 的前端作品集網站——不定期更新中：收錄練習過的前端練習專案",
+  title: "BacktoBlack.blog Created by Howard Huang",
+  description: "嗨嗨這裡是天母黑人的部落格，不定期更新中😎",
 };
 
 export default function RootLayout({ children }) {
