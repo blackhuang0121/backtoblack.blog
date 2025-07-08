@@ -14,16 +14,16 @@ export default function Posts({ posts, title = "全部文章" }) {
                         <Link
                             key={post.slug}
                             href={`/posts/${post.slug}`}
-                            className="flex bg-neutral-800 rounded-xl overflow-hidden shadow hover:scale-105 transition w-full max-w-3xl"
+                            className="flex items-stretch bg-neutral-800 rounded-xl overflow-hidden shadow hover:scale-105 transition w-full max-w-3xl"
                         >
                             {/* 左側 Cover 圖片 */}
-                            <div className="w-48 h-36 flex-shrink-0 relative">
+                            <div className="w-48 flex-shrink-0 relative">
                                 {post.cover && (
                                     <Image
                                         src={post.cover}
                                         alt={post.title}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover object-center"
                                     />
                                 )}
                             </div>
