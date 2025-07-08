@@ -3,51 +3,11 @@ import Link from 'next/link';
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Header from "@/components/Header";
+import HeroImage from "@/components/HeroImage";
+import CategoryCards from "@/components/CategoryCards";
+import Footer from "@/components/Footer";
 
-// export const dynamic = 'force-dynamic';
-
-const projects = [
-  {
-    name: '進擊的巨人角色',
-    desc: 'Fetch 進擊的巨人角色',
-    link: '/projects/attack-on-titan/index.html',
-  },
-  {
-    name: '圖片滑動版',
-    desc: '圖片滑動展示',
-    link: '/projects/image-slider/index.html',
-  },
-  {
-    name: '怪奇物語角色',
-    desc: 'Fetch 怪奇物語角色',
-    link: '/projects/stranger-things/index.html',
-  },
-  {
-    name: '隨機出現圖片',
-    desc: '隨機出現',
-    link: '/projects/random-photos/index.html',
-  },
-  {
-    name: 'Fetch 隨機出現圖片',
-    desc: 'Fetch 點選按鈕隨機出現圖片',
-    link: '/projects/random-photos-fetch/index.html',
-  },
-  {
-    name: 'Sidebar Menu',
-    desc: '側邊欄',
-    link: '/projects/sidebar-menu/index.html',
-  },
-  {
-    name: '滑動載入圖片',
-    desc: '點選按鈕隨機出現圖片',
-    link: '/projects/lazy-loading-images/index.html',
-  },
-  {
-    name: 'Dark Mode',
-    desc: '閱讀模式',
-    link: '/projects/dark-mode-toggle/index.html',
-  },
-];
 
 // 取得最新文章
 async function getLatestPosts(n = 3) {
@@ -70,40 +30,12 @@ export default async function Home() {
   const latestPosts = await getLatestPosts(3);
   return (
     <div className="min-h-screen flex flex-col bg-neutral-900 text-white">
-      <nav className="absolute top-8 right-8">
-        <Link href="/about" className="text-gray-400 hover:text-yellow-400 transition">
-          About
-        </Link>
-      </nav>
-      {/* Main 區塊 */}
-      <main className="flex-1 flex flex-col items-center justify-center">
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 w-full max-w-5xl">
-          {projects.map((item, idx) => (
-            <li key={idx} className="bg-white dark:bg-gray-800 rounded-xl shadow p-8 flex flex-col items-center transition hover:scale-105">
-              <a href={item.link} target="_blank" rel="noopener" className="text-2xl font-bold mb-2 hover:text-blue-700 dark:hover:text-yellow-400">
-                {item.name}
-              </a>
-              <p className="text-gray-500 dark:text-gray-400">{item.desc}</p>
-            </li>
-          ))}
-        </ul>
+      <Header />
+      <HeroImage />
+      <div className="w-full max-w-4xl px-4 mt-10 flex flex-col gap-12 mx-auto">
+        <CategoryCards />
         {/* 最新文章區塊 */}
-        {/* <section className="w-full max-w-2xl my-10">
-          <h2 className="text-xl font-bold mb-4 text-yellow-300">最新文章</h2>
-          <ul>
-            {latestPosts.map((post) => (
-              <li key={post.slug} className="mb-2">
-                <Link href={`/posts/${post.slug}`}
-                  className="text-lg text-blue-400 hover:underline">
-                  {post.title}
-                </Link>
-                <span className="text-gray-400 ml-2 text-sm">{post.date}</span>
-              </li>
-            ))}
-          </ul>
-        </section> */}
-        {/* 最新文章區塊 */}
-        <section className="w-full max-w-3xl my-10">
+        <section className="w-full max-w-3xl my-10 mx-auto">
           <h2 className="text-xl font-bold mb-4 text-yellow-300">最新文章</h2>
           <div className="flex flex-col gap-6">
             {latestPosts.map((post) => (
@@ -124,7 +56,7 @@ export default async function Home() {
                     <span>發文日期：{post.date}</span>
                   </div>
                   <div className="text-xs text-gray-300 mb-2 truncate">
-                    {post.description.length > 30 ? post.description.slice(0, 30) + '...' : post.description}
+                    {post.description?.length > 30 ? post.description.slice(0, 30) + '...' : post.description}
                   </div>
                 </div>
               </Link>
@@ -147,7 +79,8 @@ export default async function Home() {
             &quot;Don&apos;t wait for the tide just to dip both your feet in.&quot; - Beabadoobee
           </p>
         </div>
-      </main>
+      </div>
+      <Footer />
     </div>
   );
 }

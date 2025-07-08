@@ -42,7 +42,7 @@ export default function SidebarMenu() {
                     <a href="#essays" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         🖋️ 隨筆 Essays
                     </a>
-                    <a href="#about" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    <a href="/about" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         🙋‍♂️ 關於 About
                     </a>
                 </nav>
