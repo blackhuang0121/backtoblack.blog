@@ -22,16 +22,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-
         {children}
-        <Footer />
-
       </body>
 
     </html>
   );
 }
-
-import Header from "../components/Header";
-import Footer from "../components/Footer";
