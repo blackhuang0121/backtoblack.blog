@@ -3,13 +3,11 @@ import path from "path";
 import matter from "gray-matter";
 import Posts from "@/components/Posts";
 
-export const dynamic = "force-static"; // SSG
-
-export default function PostsPage() {
+export default async function CategoryPage({ params }) {
     const postsDir = path.join(process.cwd(), "posts");
     const filenames = fs.readdirSync(postsDir);
 
-    const posts = filenames.map((file) => {
+    const allPosts = filenames.map((file) => {
         const filePath = path.join(postsDir, file);
         const fileContents = fs.readFileSync(filePath, "utf-8");
         const { data } = matter(fileContents);
@@ -17,7 +15,12 @@ export default function PostsPage() {
             slug: file.replace(/\.md$/, ""),
             ...data,
         };
-    }).sort((a, b) => new Date(b.date) - new Date(a.date));
+    });
 
-    return <Posts posts={posts} title="全部文章" />;
+    const category = decodeURIComponent(params.category);
+    const filtered = allPosts.filter(
+        post => post.category === category
+    );
+
+    return <Posts posts={filtered} title={category + " 文章列表"} />;
 }
