@@ -12,7 +12,7 @@ export default function About() {
                     <p className="mb-6 text-gray-300">
                         嗨嗨👋 我是黃啟豪！熱衷拍照，終於從底片踏入數位的坑，也拿去歐洲拍了拍。拉花學了大半年年總算有了些成果，最愛英國難得的晴天與漫步在日本的街道。
                     </p>
-                    <div className="flex flex-row items-center gap-8 w-fit mt-8">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-6">
                         <Image
                             src="/img/DSCF4465.JPG"
                             alt="我的照片"

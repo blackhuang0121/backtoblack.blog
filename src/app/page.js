@@ -36,7 +36,7 @@ export default async function Home() {
         <CategoryCards />
         {/* 最新文章區塊 */}
         <section className="w-full max-w-3xl my-10 mx-auto">
-          <h2 className="text-xl font-bold mb-4 text-yellow-300">最新文章</h2>
+          <h2 className="text-2xl font-bold mb-4 text-white">最新文章</h2>
           <div className="flex flex-col gap-6">
             {latestPosts.map((post) => (
               <Link
@@ -63,10 +63,10 @@ export default async function Home() {
             ))}
           </div>
         </section>
-        <p className="mt-10 text-gray-400 text-center max-w-md">
+        <p className="mt-10 text-gray-400 text-center items-center max-w-md mx-auto">
           &quot;Won&apos;t you give yourself a try? Won&apos;t you give?&quot; - The 1975
         </p>
-        <div className="mt-4 mb-6 flex flex-col items-center">
+        <div className="mb-6 flex flex-col items-center">
           <Image
             src="/img/DSCF4701.JPG"
             alt="Howard Huang"
