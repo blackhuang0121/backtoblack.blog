@@ -26,7 +26,7 @@ export default function Header() {
                         <Link href="/category/trips" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
                             🧳 旅遊 Trips
                         </Link>
-                        <Link href="#photos" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
+                        <Link href="/category/photos" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">
                             📸 攝影 Photos
                         </Link>
                         <Link href="/category/essays" className="px-4 py-3 rounded-2xl bg-gray-800 hover:bg-gray-700 text-white text-xl md:text-2xl font-extrabold flex items-center gap-2 shadow-xl transition-all duration-200">

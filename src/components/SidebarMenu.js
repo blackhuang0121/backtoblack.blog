@@ -33,13 +33,13 @@ export default function SidebarMenu() {
                     </button>
                 </div>
                 <nav className="flex flex-col gap-6 p-6">
-                    <a href="#trips" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    <a href="/category/trips" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         🧳 旅遊 Trips
                     </a>
-                    <a href="#photos" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    <a href="/category/photos" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         📸 攝影 Photos
                     </a>
-                    <a href="#essays" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    <a href="/category/essays" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         🖋️ 隨筆 Essays
                     </a>
                     <a href="/about" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
