@@ -15,8 +15,8 @@ export default function GalleryPage({ params }) {
                     <Image
                         src={gallery.cover}
                         alt={gallery.title}
-                        width={400}          // 這裡你可以根據你需求自訂寬度
-                        height={300}         // 高度建議配合 w-60 h-44 的比例，或用 16:9 (如 400/225)
+                        width={1920}
+                        height={600}
                         className="object-cover w-full h-full"
                     />
                 </div>
