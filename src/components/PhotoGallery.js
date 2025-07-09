@@ -20,8 +20,13 @@ export default function PhotoGallery({ galleries, title = "我的相簿" }) {
                         >
                             {/* 左側圖片，寬高可自行調整，這裡設 w-60 h-44 */}
                             <div className="w-60 h-44 flex-shrink-0 relative my-auto">
-                                <Image src={g.cover} alt={g.title} className="object-cover w-full h-full" />
-                            </div>
+                                <Image
+                                    src={g.cover}
+                                    alt={g.title}
+                                    width={400}          // 這裡你可以根據你需求自訂寬度
+                                    height={300}         // 高度建議配合 w-60 h-44 的比例，或用 16:9 (如 400/225)
+                                    className="object-cover w-full h-full"
+                                />                            </div>
                             {/* 右側內容 */}
                             <div className="flex flex-col justify-between p-6 min-w-0 flex-1">
                                 <h2 className="text-lg font-bold mb-1">{g.title}</h2>

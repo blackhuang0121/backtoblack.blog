@@ -15,6 +15,8 @@ export default function GalleryPage({ params }) {
                     <Image
                         src={gallery.cover}
                         alt={gallery.title}
+                        width={400}          // 這裡你可以根據你需求自訂寬度
+                        height={300}         // 高度建議配合 w-60 h-44 的比例，或用 16:9 (如 400/225)
                         className="object-cover w-full h-full"
                     />
                 </div>
@@ -36,6 +38,8 @@ export default function GalleryPage({ params }) {
                         <Image
                             key={img.src}
                             src={img.src}
+                            width={400}          // 這裡你可以根據你需求自訂寬度
+                            height={300}         // 高度建議配合 w-60 h-44 的比例，或用 16:9 (如 400/225)
                             alt={img.alt || gallery.title}
                             className="rounded-xl object-cover w-full h-52"
                         />

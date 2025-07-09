@@ -21,6 +21,8 @@ export default async function PostPage({ params }) {
                     <Image
                         src={data.cover}
                         alt={data.title}
+                        width={400}          // 這裡你可以根據你需求自訂寬度
+                        height={300}         // 高度建議配合 w-60 h-44 的比例，或用 16:9 (如 400/225)
                         className="w-full h-[320px] md:h-[560px] object-cover mb-6"
                     />
                     // 封面置中，留白寫法：mb-6 w-full max-h-[400px] object-cover rounded-xl shadow
