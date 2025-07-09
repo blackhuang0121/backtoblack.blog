@@ -2,6 +2,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PhotoGallery({ galleries, title = "我的相簿" }) {
     return (
@@ -19,7 +20,7 @@ export default function PhotoGallery({ galleries, title = "我的相簿" }) {
                         >
                             {/* 左側圖片，寬高可自行調整，這裡設 w-60 h-44 */}
                             <div className="w-60 h-44 flex-shrink-0 relative my-auto">
-                                <img src={g.cover} alt={g.title} className="object-cover w-full h-full" />
+                                <Image src={g.cover} alt={g.title} className="object-cover w-full h-full" />
                             </div>
                             {/* 右側內容 */}
                             <div className="flex flex-col justify-between p-6 min-w-0 flex-1">

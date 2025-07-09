@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+
 
 export default function SidebarMenu() {
     const [open, setOpen] = useState(false);
@@ -33,18 +35,18 @@ export default function SidebarMenu() {
                     </button>
                 </div>
                 <nav className="flex flex-col gap-6 p-6">
-                    <a href="/category/trips" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    <Link href="/category/trips" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         🧳 旅遊 Trips
-                    </a>
-                    <a href="/category/photos" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link href="/category/photos" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         📸 攝影 Photos
-                    </a>
-                    <a href="/category/essays" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link href="/category/essays" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         🖋️ 隨筆 Essays
-                    </a>
-                    <a href="/about" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link href="/about" className="text-xl font-medium hover:text-cyan-400" onClick={() => setOpen(false)}>
                         🙋‍♂️ 關於 About
-                    </a>
+                    </Link>
                 </nav>
             </aside>
         </>

@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default async function PostPage({ params }) {
     const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
@@ -17,7 +18,7 @@ export default async function PostPage({ params }) {
             <div className="min-h-screen bg-neutral-900 text-white">
                 {/* Cover 圖片 */}
                 {data.cover && (
-                    <img
+                    <Image
                         src={data.cover}
                         alt={data.title}
                         className="w-full h-[320px] md:h-[560px] object-cover mb-6"

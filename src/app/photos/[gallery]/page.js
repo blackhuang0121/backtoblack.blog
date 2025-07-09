@@ -1,6 +1,7 @@
 import galleries from "@/app/photos/data/galleries.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function GalleryPage({ params }) {
     const gallery = galleries.find(g => g.id === params.gallery);
@@ -11,7 +12,7 @@ export default function GalleryPage({ params }) {
             <Header />
             <main className="max-w-4xl mx-auto py-8">
                 <div className="w-full h-72 md:h-96 rounded-2xl overflow-hidden mb-8 shadow">
-                    <img
+                    <Image
                         src={gallery.cover}
                         alt={gallery.title}
                         className="object-cover w-full h-full"
@@ -32,7 +33,7 @@ export default function GalleryPage({ params }) {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {/* 這裡假設你的 gallery 有一個 images: [] 屬性，存所有照片 */}
                     {(gallery.images || []).map((img) => (
-                        <img
+                        <Image
                             key={img.src}
                             src={img.src}
                             alt={img.alt || gallery.title}
