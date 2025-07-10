@@ -35,44 +35,8 @@ export default function CategoryCards() {
     const [hoverIdx, setHoverIdx] = useState(0);
 
     return (
-        // <div className="w-full max-w-5xl px-4 mt-8 mx-auto w-full flex justify-center">
-        //     <div className="flex flex-col gap-6 w-full md:w-1/2">
-        //         {categories.map((cat, idx) => (
-        //             <div
-        //                 key={cat.title}
-        //                 className={
-        //                     `rounded-2xl p-6 shadow-lg cursor-pointer transition-all duration-200 ` +
-        //                     cat.color +
-        //                     (hoverIdx === idx ? ' scale-105 ring-4 ring-cyan-200' : '')
-        //                 }
-        //                 onMouseEnter={() => setHoverIdx(idx)}
-        //                 onMouseLeave={() => setHoverIdx(0)}
-        //             >
-        //                 <div className="text-lg font-bold flex items-center gap-2">
-        //                     <span>{cat.emoji}</span>
-        //                     <span>{cat.title}</span>
-        //                 </div>
-        //                 <div className="mt-2 text-base">
-        //                     {cat.desc}
-        //                 </div>
-        //             </div>
-        //         ))}
-        //     </div>
-        //     <div className="flex-1 flex items-center justify-center">
-        //         <div className="relative w-full h-[260px] md:h-[400px] max-w-md rounded-2xl overflow-hidden shadow-xl">
-        //             <Image
-        //                 src={categories[hoverIdx].img}
-        //                 alt={categories[hoverIdx].title}
-        //                 fill
-        //                 className="object-cover object-center"
-        //                 priority
-        //             />
-        //         </div>
-        //     </div>
-        // </div>
-
         <div className="w-full max-w-5xl px-4 mt-2 mx-auto flex flex-col gap-10 items-start">
-            <h2 className="text-2xl md:text-2xl font-bold mb-2">選個主題走走吧</h2>
+            <h2 className="text-2xl md:text-2xl font-bold">選個主題走走吧</h2>
 
             <div className="w-full max-w-5xl px-4 mt-2 mx-auto flex flex-row gap-10 items-start">
                 {/* 左半：三個圖卡 */}

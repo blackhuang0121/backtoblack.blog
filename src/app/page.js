@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import HeroImage from "@/components/HeroImage";
 import CategoryCards from "@/components/CategoryCards";
 import Footer from "@/components/Footer";
-
+import ImageSlider from "@/components/ImageSlider";
 
 // 取得最新文章
 async function getLatestPosts(n = 3) {
@@ -33,10 +33,11 @@ export default async function Home() {
       <Header />
       <HeroImage />
       <div className="w-full max-w-4xl px-4 mt-10 flex flex-col gap-12 mx-auto">
-        <CategoryCards />
         {/* 最新文章區塊 */}
-        <section className="w-full max-w-3xl my-10 mx-auto">
-          <h2 className="text-2xl font-bold mb-4 text-white">最新文章</h2>
+        <section className="w-full max-w-3xl my-10 mb-2 mx-auto">
+          <CategoryCards />
+
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-white">最新文章</h2>
           <div className="flex flex-col gap-6">
             {latestPosts.map((post) => (
               <Link
@@ -63,7 +64,11 @@ export default async function Home() {
             ))}
           </div>
         </section>
-        <p className="mt-10 text-gray-400 text-center items-center max-w-md mx-auto">
+        <section className="w-full max-w-3xl mt-2 mb-2 my-10 mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-4 mt-4">隨著光和影的變化按下快門</h2>
+          <ImageSlider />
+        </section>
+        <p className="mt-2 text-gray-400 text-center items-center max-w-md mx-auto">
           &quot;Won&apos;t you give yourself a try? Won&apos;t you give?&quot; - The 1975
         </p>
         <div className="mb-6 flex flex-col items-center">
@@ -75,7 +80,7 @@ export default async function Home() {
             style={{ height: 'auto' }}
             className="rounded object-contain"
           />
-          <p className="mt-4 text-gray-400 text-center max-w-md">
+          <p className="mt-6 text-gray-400 text-center max-w-md">
             &quot;Don&apos;t wait for the tide just to dip both your feet in.&quot; - Beabadoobee
           </p>
         </div>

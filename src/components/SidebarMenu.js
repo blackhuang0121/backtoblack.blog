@@ -25,7 +25,7 @@ export default function SidebarMenu() {
             />
             {/* Sidebar */}
             <aside
-                className={`fixed top-0 left-0 h-full w-96 bg-black text-white z-40 shadow-2xl transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed top-0 left-0 h-full w-80 sm:w-96 bg-black text-white z-40 shadow-2xl transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'
                     }`}
             >
                 <div className="flex items-center justify-between p-6 border-b border-gray-700">
