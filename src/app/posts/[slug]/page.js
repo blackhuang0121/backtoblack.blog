@@ -5,8 +5,26 @@ import matter from 'gray-matter';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
+import { getAllPostsMeta } from './getAllPostsMeta'; // 或你自己的方法
+
+// export default async function PostPage({ params }) {
+//     const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
+//     const fileContents = fs.readFileSync(filePath, 'utf8');
+//     const { data, content } = matter(fileContents);
 
 export default async function PostPage({ params }) {
+    // 取得所有文章 meta
+    const allPosts = getAllPostsMeta();
+    // 依日期新到舊排序
+    const posts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // 找目前文章
+    const currentIdx = posts.findIndex(post => post.slug === params.slug);
+    const prevPost = currentIdx > 0 ? posts[currentIdx - 1] : null;
+    const nextPost = currentIdx < posts.length - 1 ? posts[currentIdx + 1] : null;
+
+    // 取得當前文章內容
     const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
@@ -57,6 +75,32 @@ export default async function PostPage({ params }) {
 
                     <div className="prose prose-invert max-w-3xl mx-auto">
                         <ReactMarkdown>{content}</ReactMarkdown>
+                    </div>
+                </div>
+                <div className="border-t border-gray-700 pt-8 mx-4 md:mx-12">
+                    <div className="flex flex-row justify-between items-center mb-6">
+                        <div className="w-full md:w-auto text-left">
+                            {prevPost && (
+                                <Link href={`/posts/${prevPost.slug}`} className="text-white font-bold duration-200 hover:text-yellow-400">
+                                    👈 上一篇：{prevPost.title}
+                                </Link>
+                            )}
+                        </div>
+                        <div>
+                            {nextPost && (
+                                <Link href={`/posts/${nextPost.slug}`} className="text-white font-bold duration-200 hover:text-yellow-400">
+                                    下一篇：{nextPost.title} 👉
+                                </Link>
+                            )}
+                        </div>
+                    </div>
+                    <div className="flex flex-row justify-between items-center">
+                        <Link href="/posts" className="text-white font-bold duration-200 hover:text-yellow-400">
+                            查看所有文章
+                        </Link>
+                        <Link href="/" className="text-white font-bold duration-200 hover:text-yellow-400">
+                            回到首頁
+                        </Link>
                     </div>
                 </div>
             </div>
