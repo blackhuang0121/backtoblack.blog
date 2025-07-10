@@ -2,7 +2,7 @@
 title: "荷蘭｜鹿特丹小孩堤坊與白色風車"
 date: "2024-07-09"
 travel_date: "2024-03-27"
-cover: "/img/DSCF3158.jpg"
+cover: "https://live.staticflickr.com/65535/53976641147_443bbea667_b.jpg"
 description: "萊登到鹿特丹，初訪小孩堤坊的多重風車群，騎單車、拍照片與搭公車的日常。"
 category: "trips"
 tags: ["歐洲", "荷蘭", "鹿特丹", "風車"]
@@ -16,9 +16,9 @@ country: "荷蘭"
 
 一樣幫自己買了杏仁可頌，再晃到咖啡店點了杯衣索比亞手沖配著吃。
 
-![描述文字3](/img/DSCF3015.jpg)
-![描述文字3](/img/DSCF3020.jpg)
-![描述文字3](/img/DSCF3028.jpg)
+![描述文字3](https://live.staticflickr.com/65535/54646346875_650f75b5b8_b.jpg)
+![描述文字3](https://live.staticflickr.com/65535/54645181262_b1fb4a3d52_b.jpg)
+![描述文字3](https://live.staticflickr.com/65535/54646273928_fa816246b6_b.jpg)
 
 ---
 
@@ -31,41 +31,41 @@ PS 然哥依舊要當個愛家顧工作的好男人，傍晚下了班才要跟�
 應該只花 2-30 分鐘不到便抵達鹿特丹，搭船去小孩堤防會快些，因此我們在車站前換了前往碼頭的公車，時間算得剛剛好，船不一會就來了。
 
 
-![描述文字](/img/DSCF3065.jpg)
-![描述文字](/img/DSCF3069.jpg)
-![描述文字](/img/DSCF3077.JPG)
+![描述文字](https://live.staticflickr.com/65535/53976641447_dfc9141d32_b.jpg)
+![描述文字](https://live.staticflickr.com/65535/54646025286_dddf3e8752_b.jpg)
+![描述文字](https://live.staticflickr.com/65535/54646273903_be64dca3f9_b.jpg)
 
 ---
 
-## 小孩堤防
+## 小孩堤防沒有白色風車
 
 今天的天氣算是多雲晴朗，太陽時不時會露臉，像是船快要抵達小孩堤防時，太陽變大了起來，趕緊把握機會換了長焦鏡頭，準備拍風車。
 
-![描述文字](/img/DSCF3158.JPG)
+![描述文字](https://live.staticflickr.com/65535/54646025361_b1abb774af_b.jpg)
 
 小孩堤防的範圍其實很長，碼頭與服務中心往後一路延伸，與相互平行的河交錯的陸地上有各種不同大小、造型的風車，反映出不同年代的建造背景。
 
 有獨自矗立運轉著的大風車；有跟單一橘紅色矮房組合的風車；也有好幾個相鄰而建的風車群。
 
-![描述文字3](/img/DSCF3181.JPG)
+![描述文字3](https://live.staticflickr.com/65535/53977844429_59203dd805_b.jpg)
 
-![描述文字3](/img/DSCF3175.jpg)
+![描述文字3](https://live.staticflickr.com/65535/53976641147_443bbea667_b.jpg)
 
 乘著風走著走著，一群騎著自行車的遊客騎進視線中，彷彿連自己都感受得到破風前行的愜意感。
 
 當然也跟風車拍了合照，長焦鏡頭拍起來背景的壓縮感，與前景人物的搭配真的讓畫面更聚焦了。
 
-![描述文字3](/img/DSCF3138.JPG)
+![描述文字3](https://live.staticflickr.com/65535/54646346725_c2b3010ca3_b.jpg)
 
-![描述文字3](/img/DSCF3125.JPG)
+![描述文字3](https://live.staticflickr.com/65535/54646256629_e72093029d_b.jpg)
 
 雖然是很平淡地看著，有幾個風車有開放參觀，也沒有特別再花門票錢進去參觀，但光是走著也是一種平靜，好像將前幾天行程帶來的疲倦感又消除了一些。
 
-![描述文字3](/img/DSCF3170.JPG)
+![描述文字3](https://live.staticflickr.com/65535/54646273718_cf1fff91b2_b.jpg)
 
-![描述文字3](/img/DSCF3195.JPG)
+![描述文字3](https://live.staticflickr.com/65535/54646346545_2ceab6ecf8_b.jpg)
 
-![描述文字3](/img/DSCF3198.JPG)
+![描述文字3](https://live.staticflickr.com/65535/54646256459_ff3cc1bd52_b.jpg)
 
 ---
 
