@@ -2,10 +2,19 @@ import galleries from "@/app/photos/data/galleries.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GalleryPage({ params }) {
     const gallery = galleries.find(g => g.id === params.gallery);
     if (!gallery) return <div>Not found</div>;
+
+    // **排序，並找 index**
+    const sortedGalleries = galleries.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+    const currentIdx = sortedGalleries.findIndex(g => g.id === params.gallery);
+
+    // **找前後一輯**
+    const prevGallery = currentIdx < sortedGalleries.length - 1 ? sortedGalleries[currentIdx + 1] : null;
+    const nextGallery = currentIdx > 0 ? sortedGalleries[currentIdx - 1] : null;
 
     return (
         <>
@@ -47,6 +56,32 @@ export default function GalleryPage({ params }) {
                 </div>
                 {/* 這裡可做下滑自動加載更多的設計 */}
             </main>
+            <div className="border-t border-gray-700 pt-8 mx-4 md:mx-12">
+                <div className="flex flex-row justify-between items-center mb-6">
+                    <div className="w-full md:w-auto text-left">
+                        {prevGallery && (
+                            <Link href={`/photos/${prevGallery.id}`} className="font-bold hover:text-yellow-400">
+                                ← 上一輯：{prevGallery.title}
+                            </Link>
+                        )}
+                    </div>
+                    <div>
+                        {nextGallery && (
+                            <Link href={`/photos/${nextGallery.id}`} className="font-bold hover:text-yellow-400">
+                                下一輯：{nextGallery.title} →
+                            </Link>
+                        )}
+                    </div>
+                </div>
+                <div className="flex flex-row justify-between items-center">
+                    <Link href="/photos" className="text-white font-bold duration-200 hover:text-yellow-400">
+                        查看所有相簿
+                    </Link>
+                    <Link href="/" className="text-white font-bold duration-200 hover:text-yellow-400">
+                        回到首頁
+                    </Link>
+                </div>
+            </div>
             <Footer />
         </>
     );

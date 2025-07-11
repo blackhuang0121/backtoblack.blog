@@ -11,7 +11,7 @@ import ImageSlider from "@/components/ImageSlider";
 import { getAllPostsMeta } from "./posts/[slug]/getAllPostsMeta";
 
 export default function Home() {
-  const latestPosts = getAllPostsMeta().slice(0, 5);
+  const latestPosts = getAllPostsMeta().slice(0, 3);
   return (
     <div className="min-h-screen flex flex-col bg-neutral-900 text-white">
       <Header />
