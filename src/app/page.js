@@ -1,33 +1,17 @@
 import Image from "next/image";
 import Link from 'next/link';
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+// import fs from "fs";
+// import path from "path";
+// import matter from "gray-matter";
 import Header from "@/components/Header";
 import HeroImage from "@/components/HeroImage";
 import CategoryCards from "@/components/CategoryCards";
 import Footer from "@/components/Footer";
 import ImageSlider from "@/components/ImageSlider";
+import { getAllPostsMeta } from "./posts/[slug]/getAllPostsMeta";
 
-// 取得最新文章
-async function getLatestPosts(n = 3) {
-  const postsDir = path.join(process.cwd(), "posts");
-  const filenames = fs.readdirSync(postsDir);
-
-  const posts = filenames.map((file) => {
-    const filePath = path.join(postsDir, file);
-    const fileContents = fs.readFileSync(filePath, "utf-8");
-    const { data } = matter(fileContents);
-    return {
-      slug: file.replace(/\.md$/, ""),
-      ...data,
-    };
-  }).sort((a, b) => new Date(b.date) - new Date(a.date));
-  return posts.slice(0, n);
-}
-
-export default async function Home() {
-  const latestPosts = await getLatestPosts(3);
+export default function Home() {
+  const latestPosts = getAllPostsMeta().slice(0, 5);
   return (
     <div className="min-h-screen flex flex-col bg-neutral-900 text-white">
       <Header />
