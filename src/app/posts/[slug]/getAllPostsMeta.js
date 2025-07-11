@@ -21,7 +21,7 @@ export function getAllPostsMeta() {
         })
 
         // 避免有沒有 date 的（例如暫存檔、草稿）出現在清單
-        .filter((post) => !!post.date)
+        .filter((post) => !!post.date && !post.draft)
         // 重點：統一新到舊排序！
         .sort((a, b) => new Date(b.date) - new Date(a.date));
 

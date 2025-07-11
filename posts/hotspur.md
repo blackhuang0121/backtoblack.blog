@@ -1,5 +1,6 @@
 ---
 title: "倫敦｜熱刺 VS 盧頓－英超現場初體驗，北角白鹿徑遇南韓老孫"
+draft: false
 date: "2024-07-10"
 travel_date: "2024-03-30"
 cover: "https://live.staticflickr.com/65535/54012925048_6f493662ae_b.jpg"

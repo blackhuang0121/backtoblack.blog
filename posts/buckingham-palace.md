@@ -1,5 +1,6 @@
 ---
 title: "倫敦｜皇室迷朝聖——大笨鐘與白金漢宮"
+draft: false
 date: "2024-09-08"
 travel_date: "2024-03-31"
 cover: "https://live.staticflickr.com/65535/53992718797_f737bbbe9c_b.jpg"

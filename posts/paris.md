@@ -1,5 +1,6 @@
 ---
 title: "巴黎｜漫步香榭麗舍大道與巴黎博物館巡禮：凱旋門篇"
+draft: false
 date: "2024-09-07"
 travel_date: "2024-04-03"
 cover: "https://live.staticflickr.com/65535/53990421200_19a9842ac2_b.jpg"
