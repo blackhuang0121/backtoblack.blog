@@ -8,21 +8,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllPostsMeta } from './getAllPostsMeta'; // 或你自己的方法
 
-// export default async function PostPage({ params }) {
-//     const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
-//     const fileContents = fs.readFileSync(filePath, 'utf8');
-//     const { data, content } = matter(fileContents);
+export default function PostPage({ params }) {
+    // 取得所有文章 meta 並按發佈日期排序（新到舊）
+    const posts = getAllPostsMeta().sort((a, b) => new Date(b.date) - new Date(a.date));
 
-export default async function PostPage({ params }) {
-    // 取得所有文章 meta
-    const allPosts = getAllPostsMeta();
-    // 依日期新到舊排序
-    const posts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    // 找目前文章
+    // 找目前這篇的 index
     const currentIdx = posts.findIndex(post => post.slug === params.slug);
-    const prevPost = currentIdx > 0 ? posts[currentIdx - 1] : null;
-    const nextPost = currentIdx < posts.length - 1 ? posts[currentIdx + 1] : null;
+
+    // 找上一篇/下一篇
+    const prevPost = currentIdx < posts.length - 1 ? posts[currentIdx + 1] : null;
+    const nextPost = currentIdx > 0 ? posts[currentIdx - 1] : null;
 
     // 取得當前文章內容
     const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);

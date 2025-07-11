@@ -18,7 +18,12 @@ export function getAllPostsMeta() {
                 ...data,
                 slug, // 方便生成連結
             };
-        });
+        })
+
+        // 避免有沒有 date 的（例如暫存檔、草稿）出現在清單
+        .filter((post) => !!post.date)
+        // 重點：統一新到舊排序！
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     return posts;
 }
