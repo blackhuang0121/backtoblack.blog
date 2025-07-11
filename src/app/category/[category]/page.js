@@ -9,7 +9,9 @@ import galleries from "@/app/photos/data/galleries.json";
 export default function CategoryPage({ params }) {
     const category = decodeURIComponent(params.category);
     if (category === "photos") {
-        const filtered = galleries.filter(g => g.category === "photos");
+        const filtered = galleries
+            .filter(g => g.category === "photos")
+            .filter(g => g.draft !== true);
         filtered.sort((a, b) => new Date(b.date) - new Date(a.date)); // 時間排序
         return <PhotoGallery galleries={filtered} title="我的相簿" />;
     }

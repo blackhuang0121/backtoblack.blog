@@ -7,7 +7,7 @@ export default function HeroImage() {
         <div className="relative w-full h-[280px] md:h-[400px] flex items-center justify-center overflow-hidden">
             <Image
                 src="/img/DSCF5553.JPG"
-                alt="Hero Paris"
+                alt="Hello Paris"
                 fill
                 className="object-cover object-center brightness-90"
                 priority
