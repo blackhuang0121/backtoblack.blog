@@ -1,9 +1,9 @@
 ---
 title: "Hello World"
-date: "2025-07-07"         # 發文日期
-travel_date: "2024-07-07" # 旅遊日期
-cover: "/img/DSCF3065.jpg"
-description: "某次歐洲行的日常，鹿特丹小孩堤坊、騎單車..."
+date: "2024-07-15"
+travel_date: "2024-07-07"
+cover: "/img/DSCF2135.jpg"
+description: "某次歐洲行的日常，鹿特丹小孩堤坊、騎單車"
 category: "essays"
 tags: ["歐洲", "鹿特丹"]
 city: "鹿特丹"
