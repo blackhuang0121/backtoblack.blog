@@ -105,7 +105,7 @@ function filterByKey(dataArr, key) {
 
 async function main() {
     const posts = getPostsMeta('./posts');
-    const photos = getPhotosMeta('./app/photos/data/galleries.json');
+    const photos = getPhotosMeta('./scr/app/photos/data/galleries.json');
 
     // 1. Posts 工作表
     const postCols = ['title', 'draft', 'date', 'travel_date', 'category', 'tags', 'country', 'city', 'filename'];
