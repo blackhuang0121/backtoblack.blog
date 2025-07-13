@@ -150,11 +150,6 @@ main().catch(e => {
     process.exit(1);
 });
 
-// const fs = require('fs');
-// const path = require('path');
-// const matter = require('gray-matter');
-// const { google } = require('googleapis');
-
 // // Google Sheets 認證
 // async function authorize() {
 //     const credentials = JSON.parse(process.env.GOOGLE_SHEET_CREDENTIALS);
