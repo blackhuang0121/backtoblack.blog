@@ -104,6 +104,15 @@ function filterByKey(dataArr, key) {
 }
 
 async function main() {
+    // Debug: 印出 credentials 的所有 key（不會印出 value，安全！）
+    try {
+        const debugCredentials = JSON.parse(process.env.GOOGLE_SHEET_CREDENTIALS);
+        console.log('[Debug] credentials keys:', Object.keys(debugCredentials));
+    } catch (e) {
+        console.error('[Debug] GOOGLE_SHEET_CREDENTIALS parse failed', e);
+        process.exit(1);
+    }
+
     const posts = getPostsMeta('./posts');
     const photos = getPhotosMeta('./src/app/photos/data/galleries.json');
 
