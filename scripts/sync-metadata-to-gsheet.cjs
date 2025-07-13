@@ -1,7 +1,7 @@
 // 新需求：分成多個工作表，且欄位、排序、分類過濾
 // - Posts: 按日期新到舊（新在最下面）、顯示 title, date, tags, ...
 // - Photos: 同理
-// - Category/Tags/City/Country：每個 key 為一個工作表，列出有這 key 的所有 post/album
+// - Category/Tags/City/Country：每個 key 為一個工作表，列出有這 key 的所有 post/photo
 // fs file system 讀取、寫入、編輯、刪除資料
 // path 處理檔案路徑字串
 // gray-matter 把 markdown 上面的 --- metadata 區塊抓出來，轉成 JS 物件。
@@ -35,19 +35,28 @@ function getPostsMeta(postsDir) {
         });
 }
 
-function getPhotosMeta(photosDir) {
-    return fs.readdirSync(photosDir)
-        .filter(file => file.endsWith('.json'))
-        .map(file => {
-            const filePath = path.join(photosDir, file);
-            const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            json.filename = file;
-            if (!json.title && json.id) {
-                json.title = json.id;
-            }
-            return json;
-        });
+function getPhotosMeta(filePath) {
+    const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    json.filename = path.basename(filePath);
+    if (!json.title && json.id) {
+        json.title = json.id;
+    }
+    return [json]; // 保持回傳 array 型別
 }
+
+// function getPhotosMeta(photosDir) {
+//     return fs.readdirSync(photosDir)
+//         .filter(file => file.endsWith('.json'))
+//         .map(file => {
+//             const filePath = path.join(photosDir, file);
+//             const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+//             json.filename = file;
+//             if (!json.title && json.id) {
+//                 json.title = json.id;
+//             }
+//             return json;
+//         });
+// }
 
 function toSheetRows(dataArr, columns) {
     if (!dataArr.length) return [];
@@ -96,7 +105,7 @@ function filterByKey(dataArr, key) {
 
 async function main() {
     const posts = getPostsMeta('./posts');
-    const photos = getPhotosMeta('./photos');
+    const photos = getPhotosMeta('./app/photos/data/galleries.json');
 
     // 1. Posts 工作表
     const postCols = ['title', 'draft', 'date', 'travel_date', 'category', 'tags', 'country', 'city', 'filename'];
@@ -124,9 +133,9 @@ async function main() {
             post.type = 'post';
             return post;
         }).filter(obj => obj[key]);
-        const filteredPhotos = getPhotosMeta('./photos').map(photo => {
-            album.type = 'photo';
-            return album;
+        const filteredPhotos = getPhotosMeta('./app/photos/data/galleries.json').map(photo => {
+            photo.type = 'photo';
+            return photo;
         }).filter(obj => obj[key]);
         const filtered = sortByDateAsc([...filteredPosts, ...filteredPhotos]);
         const keyRows = toSheetRows(filtered, mixedCols); // 欄位多 type
