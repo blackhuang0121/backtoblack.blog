@@ -2,7 +2,7 @@ name: Sync Metadata to Google Sheet
 
 on:
   push:
-    branches: [dev]   # 或 main，看你要 dev 還 main 時才跑
+    branches: [dev]   # 先用 dev 測試，後續正式再用 main
 
 jobs:
   sync-metadata:
