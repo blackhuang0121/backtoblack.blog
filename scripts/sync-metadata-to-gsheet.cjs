@@ -122,7 +122,7 @@ async function main() {
     const postsRows = toSheetRows(postsSorted, postCols);
 
     // 2. Photos 工作表
-    const photoCols = ['id', ...postCols]; // Photoss 多一個 id 欄
+    const photoCols = ['id', ...postCols]; // Photos 多一個 id 欄
     const photosSorted = sortByDateAsc(photos);
     const photosRows = toSheetRows(photosSorted, photoCols);
 
