@@ -19,7 +19,7 @@ jobs:
         run: npm install gray-matter googleapis
 
       - name: 執行同步腳本
-        run: node scripts/sync-metadata-to-gsheet.js
+        run: node scripts/sync-metadata-to-gsheet.cjs
         env:
           GOOGLE_SHEET_CREDENTIALS: ${{ secrets.GOOGLE_SHEET_CREDENTIALS }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
