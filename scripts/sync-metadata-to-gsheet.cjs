@@ -150,19 +150,6 @@ main().catch(e => {
     process.exit(1);
 });
 
-// // Google Sheets 認證
-// async function authorize() {
-//     const credentials = JSON.parse(process.env.GOOGLE_SHEET_CREDENTIALS);
-//     const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
-//     const auth = new google.auth.JWT(
-//         credentials.client_email,
-//         null,
-//         credentials.private_key,
-//         scopes
-//     );
-//     return google.sheets({ version: 'v4', auth });
-// }
-
 // // 1. 解析所有 Markdown frontmatter
 // function getPostsMeta(postsDir) {
 //     return fs.readdirSync(postsDir)
