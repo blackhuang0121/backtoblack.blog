@@ -1,6 +1,6 @@
 // 新需求：分成多個工作表，且欄位、排序、分類過濾
 // - Posts: 按日期新到舊（新在最下面）、顯示 title, date, tags, ...
-// - Albums: 同理
+// - Photos: 同理
 // - Category/Tags/City/Country：每個 key 為一個工作表，列出有這 key 的所有 post/album
 // fs file system 讀取、寫入、編輯、刪除資料
 // path 處理檔案路徑字串
@@ -35,11 +35,11 @@ function getPostsMeta(postsDir) {
         });
 }
 
-function getAlbumsMeta(albumsDir) {
-    return fs.readdirSync(albumsDir)
+function getPhotosMeta(photosDir) {
+    return fs.readdirSync(photosDir)
         .filter(file => file.endsWith('.json'))
         .map(file => {
-            const filePath = path.join(albumsDir, file);
+            const filePath = path.join(photosDir, file);
             const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             json.filename = file;
             if (!json.title && json.id) {
@@ -96,17 +96,17 @@ function filterByKey(dataArr, key) {
 
 async function main() {
     const posts = getPostsMeta('./posts');
-    const albums = getAlbumsMeta('./albums');
+    const photos = getPhotosMeta('./photos');
 
     // 1. Posts 工作表
     const postCols = ['title', 'draft', 'date', 'travel_date', 'category', 'tags', 'country', 'city', 'filename'];
     const postsSorted = sortByDateAsc(posts); // 新的在最下面
     const postsRows = toSheetRows(postsSorted, postCols);
 
-    // 2. Albums 工作表
-    const albumCols = ['id', ...postCols]; // Albums 多一個 id 欄
-    const albumsSorted = sortByDateAsc(albums);
-    const albumsRows = toSheetRows(albumsSorted, albumCols);
+    // 2. Photos 工作表
+    const photoCols = ['id', ...postCols]; // Photoss 多一個 id 欄
+    const photosSorted = sortByDateAsc(photos);
+    const photosRows = toSheetRows(photosSorted, photoCols);
 
     // 3. 混合表加 type 欄位
     const mixedCols = [...postCols, 'type'];
@@ -116,19 +116,19 @@ async function main() {
     const sheet = await authorize();
 
     await updateSheet(sheet, SHEET_ID, 'Posts', postsRows);
-    await updateSheet(sheet, SHEET_ID, 'Albums', albumsRows);
+    await updateSheet(sheet, SHEET_ID, 'Photos', photosRows);
 
     for (const key of extraKeys) {
-        // 篩選 post+album 都有這個欄位的內容
+        // 篩選 post+photo 都有這個欄位的內容
         const filteredPosts = getPostsMeta('./posts').map(post => {
             post.type = 'post';
             return post;
         }).filter(obj => obj[key]);
-        const filteredAlbums = getAlbumsMeta('./albums').map(album => {
-            album.type = 'album';
+        const filteredPhotos = getPhotosMeta('./photos').map(photo => {
+            album.type = 'photo';
             return album;
         }).filter(obj => obj[key]);
-        const filtered = sortByDateAsc([...filteredPosts, ...filteredAlbums]);
+        const filtered = sortByDateAsc([...filteredPosts, ...filteredPhotos]);
         const keyRows = toSheetRows(filtered, mixedCols); // 欄位多 type
         await updateSheet(sheet, SHEET_ID, key.charAt(0).toUpperCase() + key.slice(1), keyRows);
     }
