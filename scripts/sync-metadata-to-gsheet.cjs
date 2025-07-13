@@ -133,7 +133,7 @@ async function main() {
             post.type = 'post';
             return post;
         }).filter(obj => obj[key]);
-        const filteredPhotos = getPhotosMeta('./app/photos/data/galleries.json').map(photo => {
+        const filteredPhotos = getPhotosMeta('./src/app/photos/data/galleries.json').map(photo => {
             photo.type = 'photo';
             return photo;
         }).filter(obj => obj[key]);
