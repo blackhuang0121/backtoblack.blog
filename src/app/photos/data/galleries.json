@@ -294,5 +294,119 @@
                 "alt": "Vending machine"
             }
         ]
+    },
+    {
+        "id": "the-kings-day-2025",
+        "draft": false,
+        "title": "2025 國王節",
+        "date": "2025-07-14",
+        "travel_date": "2025-04-26",
+        "cover": "https://live.staticflickr.com/65535/54652624282_a13822d21e_b.jpg",
+        "description": "2025 荷蘭國王節",
+        "category": "photos",
+        "tags": [
+            "攝影",
+            "荷蘭",
+            "國王節"
+        ],
+        "city": "阿姆斯特丹",
+        "country": "荷蘭",
+        "images": [
+            {
+                "src": "https://live.staticflickr.com/65535/54653693054_4676134cdb_b.jpg",
+                "alt": "Heading to Amsterdam!"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54652620522_c588b12cf0_b.jpg",
+                "alt": "777"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653781425_626a616b06_b.jpg",
+                "alt": "The-King's-Day Vibe"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54652621282_a3620f3db2_b.jpg",
+                "alt": "Boat"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653463006_f8ee574f44_b.jpg",
+                "alt": "Boat"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653783020_118fc9c8ac_b.jpg",
+                "alt": "Let's make some loud noise"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653696028_9bfecae09a_b.jpg",
+                "alt": "Run ot of alcohol"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54652624282_a13822d21e_b.jpg",
+                "alt": "Traffic jam on the canel"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653784575_88ce79eef0_b.jpg",
+                "alt": "Traffic jam on the canel"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54652624452_8ea2452619_b.jpg",
+                "alt": "Clever little drinking stuff"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653698489_ab565aeb8b_b.jpg",
+                "alt": "The special one"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54652625117_00f81b289f_b.jpg",
+                "alt": "King's challenge"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653699214_54a2ed4b92_b.jpg",
+                "alt": "DJ in your area"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653786335_1bbba1eb19_b.jpg",
+                "alt": "The live show"
+            }
+        ]
+    },
+    {
+        "id": "the-kings-night-2025",
+        "draft": false,
+        "title": "2025 荷蘭國王之夜",
+        "date": "2024-07-14",
+        "travel_date": "2024-04-25",
+        "cover": "https://live.staticflickr.com/65535/54653713354_c22daf4dbe_b.jpg",
+        "description": "國王之夜",
+        "category": "photos",
+        "tags": [
+            "攝影",
+            "荷蘭",
+            "國王之夜"
+        ],
+        "city": "萊登",
+        "country": "荷蘭",
+        "images": [
+            {
+                "src": "https://live.staticflickr.com/65535/54653713534_72884612d4_b.jpg",
+                "alt": "The King's Night in Leiden"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653803370_df06341c7a_b.jpg",
+                "alt": "The King's Night in Leiden"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653713354_c22daf4dbe_b.jpg",
+                "alt": "The King's Night in Leiden"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653714173_65e138ff7b_b.jpg",
+                "alt": "The jazz band"
+            },
+            {
+                "src": "https://live.staticflickr.com/65535/54653802295_f9cab2e177_b.jpg",
+                "alt": "Saxophone"
+            }
+        ]
     }
 ]
