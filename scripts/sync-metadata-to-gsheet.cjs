@@ -31,7 +31,7 @@ function getPostsMeta(postsDir) {
             const content = fs.readFileSync(filePath, 'utf8');
             const { data } = matter(content);
             data.filename = file;
-            data.id = file.replace(/\.md$/, ''); // 去掉 .md 當作 id（slug）
+            data.id = file;      // <--- 新增這行
             return data;
         });
 }
@@ -136,7 +136,7 @@ async function main() {
     const photosRows = toSheetRows(photosSorted, photoCols);
 
     // all 表
-    const postsWithType = postsSorted.map(post => ({ ...post, type: 'post', id: '' }));
+    const postsWithType = postsSorted.map(post => ({ ...post, type: 'post' }));
     const photosWithType = photosSorted.map(photo => ({ ...photo, type: 'photo' }));
     const allRows = toSheetRows(sortByDateAsc([...postsWithType, ...photosWithType]), allCols);
 
