@@ -31,7 +31,7 @@ function getPostsMeta(postsDir) {
             const content = fs.readFileSync(filePath, 'utf8');
             const { data } = matter(content);
             data.filename = file;
-            data.id = file;      // <--- 新增這行
+            data.id = file.replace(/\.md$/, ''); // 去掉 .md 當作 id（slug）
             return data;
         });
 }
