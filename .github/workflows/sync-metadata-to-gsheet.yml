@@ -1,0 +1,25 @@
+name: Sync Metadata to Google Sheet
+
+on:
+  push:
+    branches: [main]   # dev 測試使用，正式用 main
+
+jobs:
+  sync-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 使用 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 安裝依賴
+        run: npm install gray-matter googleapis
+
+      - name: 執行同步腳本
+        run: node scripts/sync-metadata-to-gsheet.cjs
+        env:
+          GOOGLE_SHEET_CREDENTIALS: ${{ secrets.GOOGLE_SHEET_CREDENTIALS }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
