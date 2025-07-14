@@ -37,6 +37,13 @@ function getPostsMeta(postsDir) {
 
 function getPhotosMeta(filePath) {
     const json = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    if (Array.isArray(json)) {
+        json.forEach(obj => {
+            obj.filename = path.basename(filePath);
+            if (!obj.title && obj.id) obj.title = obj.id;
+        });
+        return json;
+    }
     json.filename = path.basename(filePath);
     if (!json.title && json.id) {
         json.title = json.id;
@@ -116,42 +123,31 @@ async function main() {
     const posts = getPostsMeta('./posts');
     const photos = getPhotosMeta('./src/app/photos/data/galleries.json');
 
-    // 1. Posts 工作表
+    // 欄位定義
     const postCols = ['title', 'draft', 'date', 'travel_date', 'category', 'tags', 'country', 'city', 'filename'];
-    const postsSorted = sortByDateAsc(posts); // 新的在最下面
-    const postsRows = toSheetRows(postsSorted, postCols);
+    const photoCols = ['id', ...postCols];
+    const allCols = ['id', ...postCols, 'type'];
 
-    // 2. Photos 工作表
-    const photoCols = ['id', ...postCols]; // Photos 多一個 id 欄
+    // 資料準備
+    const postsSorted = sortByDateAsc(posts);
     const photosSorted = sortByDateAsc(photos);
+    const postsRows = toSheetRows(postsSorted, postCols);
     const photosRows = toSheetRows(photosSorted, photoCols);
 
-    // 3. 混合表加 type 欄位
-    const mixedCols = [...postCols, 'type'];
-    const extraKeys = ['category', 'tags', 'city', 'country'];
+    // all 表
+    const postsWithType = postsSorted.map(post => ({ ...post, type: 'post', id: '' }));
+    const photosWithType = photosSorted.map(photo => ({ ...photo, type: 'photo' }));
+    const allRows = toSheetRows(sortByDateAsc([...postsWithType, ...photosWithType]), allCols);
 
     const SHEET_ID = process.env.SHEET_ID;
     const sheet = await authorize();
 
+    // 只需寫入一次
+    await updateSheet(sheet, SHEET_ID, 'All', allRows);
     await updateSheet(sheet, SHEET_ID, 'Posts', postsRows);
     await updateSheet(sheet, SHEET_ID, 'Photos', photosRows);
 
-    for (const key of extraKeys) {
-        // 篩選 post+photo 都有這個欄位的內容
-        const filteredPosts = getPostsMeta('./posts').map(post => {
-            post.type = 'post';
-            return post;
-        }).filter(obj => obj[key]);
-        const filteredPhotos = getPhotosMeta('./src/app/photos/data/galleries.json').map(photo => {
-            photo.type = 'photo';
-            return photo;
-        }).filter(obj => obj[key]);
-        const filtered = sortByDateAsc([...filteredPosts, ...filteredPhotos]);
-        const keyRows = toSheetRows(filtered, mixedCols); // 欄位多 type
-        await updateSheet(sheet, SHEET_ID, key.charAt(0).toUpperCase() + key.slice(1), keyRows);
-    }
-
-    console.log('所有 metadata 已同步至 Google Sheet 多個工作表');
+    console.log('已同步 All、Posts、Photos 三個工作表！');
 }
 
 main().catch(e => {
