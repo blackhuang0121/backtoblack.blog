@@ -1,25 +1,26 @@
 ---
-title: "我是範本"
+title: "Nest.js + Vercel 建立個人部落格"
 draft: true
-date: "2024-01-01"
-travel_date: "2024-01-01"
+date: "2025-07-15"
+travel_date: ""
 cover: "https://live.staticflickr.com/65535/53990421200_19a9842ac2_b.jpg"
 description: "欣賞完莫內的一系列睡蓮畫作，從橘園美術館離開後，下一站便是登頂凱旋門。"
-category: "trips"
-tags: ["歐洲", "法國", "巴黎", "凱旋門", "香榭麗舍大道"]
-city: "巴黎"
-country: "法國"
+category: "essays"
+tags: ["隨筆", "Code", "前端"]
+city: "台北"
+country: "台灣"
 ---
 
-## 塗鴉巷 Brick Lane－古著、塗鴉等次文化的聚集地
+## 起心動念
 
 ![描述文字3](https://live.staticflickr.com/65535/54011059145_faf17102f7_b.jpg)
 
 位於倫敦東區的塗鴉巷 Brick Lane，以**街道兩旁建築物的牆壁上充滿了塗鴉，聚集多家古著店著稱**，也有多家咖啡店與美食小店開設於此。
 
 塗鴉巷距我們住的飯店徒步約 15 分鐘，一早盥洗完換完裝便與然哥先出發，打算先到塗鴉巷的貝果名店吃早餐再開始探訪這個區域。
+也作為一個整理回顧。
 
-## Morning, Big Ben!
+## Hugo, GitHub Pages 都試過
 
 離開倫敦後才發現，去白金漢宮看閱兵交接儀式的那個半天，是待在倫敦五天中唯一陰天，沒有大太陽的時候，真的再次感嘆我們的好運，謝謝倫敦！（笑
 
@@ -36,8 +37,5 @@ country: "法國"
 1. 大笨鐘一
 2. 大笨鐘二
 3. 大笨鐘三
-
-![描述文字3](https://live.staticflickr.com/65535/53992717927_1b691e810b_b.jpg)
-
 
 > 這是一段引言

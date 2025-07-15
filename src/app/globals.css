@@ -79,7 +79,7 @@ body.dark {
 .prose ul li::marker,
 .prose ol li::marker {
   color: #ffe066;
-  font-size: 1.25em;
+  font-size: 1.08em;
 }
 
 /* --- 引言 blockquote：簡約左線 --- */
