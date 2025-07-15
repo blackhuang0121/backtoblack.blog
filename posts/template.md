@@ -1,8 +1,8 @@
 ---
-title: "巴黎｜漫步香榭麗舍大道與巴黎博物館巡禮：凱旋門篇"
-draft: true
-date: "2024-09-07"
-travel_date: "2024-04-03"
+title: "我是範本"
+draft: false
+date: "2024-01-01"
+travel_date: "2024-01-01"
 cover: "https://live.staticflickr.com/65535/53990421200_19a9842ac2_b.jpg"
 description: "欣賞完莫內的一系列睡蓮畫作，從橘園美術館離開後，下一站便是登頂凱旋門。"
 category: "trips"
