@@ -60,68 +60,59 @@ body.dark {
   opacity: 0.5;
 }
 
-.prose blockquote {
-  border-left: 5px solid #ffe066;
-  /* 左側粗黃色線 */
-  background: #232323;
-  /* 深色背景 */
-  color: #ffe066;
-  /* 文字也用黃或自訂 */
-  padding: 1em 1.5em;
-  margin: 2em 0;
-  border-radius: 8px;
-  font-style: italic;
-  font-size: 1.05em;
-  line-height: 1.7;
-  /* 加點陰影也可以 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-}
-
-.prose blockquote p {
-  margin: 0;
-  /* 移除內部段落預設間距 */
-}
-
-/* 有序清單：123 */
+/* 讓 Markdown 內容有共同容器 class：prose */
+.prose ul,
 .prose ol {
   margin: 1.5em 0 1.5em 1.8em;
   padding: 0;
-  list-style-type: decimal;
-  /* 預設 123 */
-  color: #fff;
-  /* 列點字色 */
   font-size: 1.08em;
+  color: #fff;
+  /* 內容文字顏色 */
 }
 
+/* 無序清單 - 圓點顏色 & 大小 */
+.prose ul li::marker {
+  color: #ffe066;
+  /* 圓點顏色 */
+  font-size: 1.25em;
+  /* 圓點大小（含有序清單共用） */
+}
+
+/* 有序清單 - 數字顏色 & 大小 */
+.prose ol li::marker {
+  color: #ffe066;
+  /* 數字顏色與圓點一致 */
+  font-size: 1.25em;
+  /* 數字大小與圓點一致 */
+  font-weight: normal;
+  /* 跟內容一致就好 */
+}
+
+/* 列點內文排版微調 */
+.prose ul li,
 .prose ol li {
   margin-bottom: 0.4em;
   line-height: 1.7;
 }
 
-/* 無序清單：圓點 */
-.prose ul {
-  margin: 1.5em 0 1.5em 1.8em;
-  padding: 0;
-  list-style-type: disc;
-  /* 預設圓點 */
-  color: #fff;
+/* --- 引言 blockquote：簡約左線 --- */
+.prose blockquote {
+  border-left: 5px solid #eee;
+  /* 左側直線，可改成 #fff 白色 */
+  background: none;
+  color: #ddd;
+  /* 引言內文字顏色 */
+  padding: 0.2em 0 0.2em 1em;
+  margin: 2em 0;
+  border-radius: 0;
+  font-style: normal;
   font-size: 1.08em;
-}
-
-.prose ul li {
-  margin-bottom: 0.4em;
   line-height: 1.7;
+  box-shadow: none;
 }
 
-/* 美化圓點顏色 */
-.prose ul li::marker {
-  color: #ffe066;
-  font-size: 1.2em;
-}
-
-/* 美化 123 列點顏色 */
-.prose ol li::marker {
-  color: #ffe066;
-  font-weight: bold;
-  font-size: 1.15em;
+.prose blockquote p {
+  margin: 0;
+  color: inherit;
+  /* 保持與 blockquote 一致 */
 }
