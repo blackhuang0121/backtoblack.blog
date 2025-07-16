@@ -61,7 +61,7 @@ export default function GalleryPage({ params }) {
                 <div className="max-w-4xl mx-auto w-full">
                     {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4"> */}
                     <PhotoAlbum
-                        layout="rows"
+                        layout="masonry"
                         photos={photos}
                         spacing={16}
                         padding={0}
