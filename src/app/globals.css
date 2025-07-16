@@ -34,7 +34,8 @@ body.dark {
 }
 
 .yarl__toolbarButton--close:hover {
-  color: #FACC15;
+  color: #FACC15 !important;
+  /* Tailwind text-yellow-400 */
   transition: color 0.2s;
 }
 
