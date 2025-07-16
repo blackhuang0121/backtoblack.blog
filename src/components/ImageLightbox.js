@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/style.css";
+import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
 
 export default function ImageLightbox({ src, alt, ...props }) {
