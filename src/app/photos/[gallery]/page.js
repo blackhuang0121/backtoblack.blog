@@ -21,6 +21,10 @@ export default function GalleryPage({ params }) {
         alt: img.alt
     }));
 
+    // Debug
+    console.log("gallery", gallery);
+    console.log("photos", photos);
+
     // **排序，並找 index**
     const sortedGalleries = galleries.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
     const currentIdx = sortedGalleries.findIndex(g => g.id === params.gallery);
