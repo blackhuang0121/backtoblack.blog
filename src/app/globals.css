@@ -33,11 +33,16 @@ body.dark {
   --foreground: #ededed;
 }
 
-.yarl__toolbarButton--close:hover {
-  color: #FACC15 !important;
-  /* Tailwind text-yellow-400 */
-  transition: color 0.2s;
+/* 讓 close 按鈕 hover 變色為 tailwind 黃色 #facc15 */
+.yarl__button_close svg {
+  transition: fill 0.2s;
 }
+
+.yarl__button_close:hover svg {
+  fill: #facc15 !important;
+  /* Tailwind 的 yellow-400 */
+}
+
 
 .prose img,
 .markdown-body img {
