@@ -1,6 +1,6 @@
 ---
 title: "Nest.js + Vercel 建立個人部落格"
-draft: true
+draft: false
 date: "2025-07-15"
 travel_date: ""
 cover: "https://live.staticflickr.com/65535/53990421200_19a9842ac2_b.jpg"
@@ -39,3 +39,13 @@ country: "台灣"
 3. 大笨鐘三
 
 > 這是一段引言
+
+code 用法如下：
+
+這是 `console.log()` 的範例用法。
+
+
+```js
+const message = "Hello World!";
+console.log(message);
+```
