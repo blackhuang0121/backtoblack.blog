@@ -4,7 +4,7 @@ draft: true
 date: "2025-07-15"
 travel_date: ""
 cover: "https://live.staticflickr.com/65535/53990421200_19a9842ac2_b.jpg"
-description: "欣賞完莫內的一系列睡蓮畫作，從橘園美術館離開後，下一站便是登頂凱旋門。"
+description: "分享從靜態網站到完莫內的一系列睡蓮畫作，從橘園美術館離開後，下一站便是登頂凱旋門。"
 category: "essays"
 tags: ["隨筆", "Code", "前端"]
 city: "台北"

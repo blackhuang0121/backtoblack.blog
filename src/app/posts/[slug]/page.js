@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPostsMeta } from './getAllPostsMeta'; // 或你自己的方法
+import ImageLightbox from "@/components/ImageLightbox";
 
 export default function PostPage({ params }) {
     // 取得所有文章 meta 並按發佈日期排序（新到舊）
@@ -69,7 +70,13 @@ export default function PostPage({ params }) {
                     <hr className="my-10 border-gray-600" />
 
                     <div className="prose prose-invert max-w-3xl mx-auto">
-                        <ReactMarkdown>{content}</ReactMarkdown>
+                        <ReactMarkdown
+                            components={{
+                                img: ({ node, ...props }) => (
+                                    <ImageLightbox src={props.src} alt={props.alt} />
+                                ),
+                            }}
+                        >{content}</ReactMarkdown>
                     </div>
                 </div>
                 <div className="border-t border-gray-700 pt-8 mx-4 md:mx-12">
