@@ -41,3 +41,13 @@ country: "法國"
 
 
 > 這是一段引言
+
+code 用法如下：
+
+這是 `console.log()` 的範例用法。
+
+
+```js
+const message = "Hello World!";
+console.log(message);
+```
