@@ -58,10 +58,13 @@ export default function GalleryPage({ params }) {
                     </div>
                 </div>
                 <hr className="my-8 border-gray-700" />
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="max-w-4xl mx-auto w-full">
+                    {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4"> */}
                     <PhotoAlbum
                         layout="rows"
                         photos={photos}
+                        spacing={16}
+                        padding={0}
                         renderPhoto={({ photo, imageProps }) => (
                             <ImageLightbox src={photo.src} alt={photo.alt} />
                         )}
