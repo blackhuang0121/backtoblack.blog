@@ -1,13 +1,25 @@
+'use client';
+import { useState } from "react";
 import galleries from "@/app/photos/data/galleries.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import ImageLightbox from "@/components/ImageLightbox";
+import PhotoAlbum from "react-photo-album";
 
 export default function GalleryPage({ params }) {
-    const gallery = galleries.find(g => g.id === params.gallery);
-    if (!gallery) return <div>Not found</div>;
+    const photos = (gallery.images || []).map(img => ({
+        src: img.src,
+        width: img.src.includes("1025") ? 1025 : 679,
+        height: img.src.includes("1025") ? 679 : 1024,
+        alt: img.alt || gallery.title,
+    }));
+
+    const [lightboxIndex, setLightboxIndex] = useState(-1);
+    //   if (!gallery) return <div>Not found</div>;
+
+
 
     // **排序，並找 index**
     const sortedGalleries = galleries.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -43,7 +55,29 @@ export default function GalleryPage({ params }) {
                 </div>
                 <hr className="my-8 border-gray-700" />
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {/* 這裡假設你的 gallery 有一個 images: [] 屬性，存所有照片 */}
+                    <PhotoAlbum
+                        layout="rows"
+                        photos={photos}
+                        onClick={({ index }) => setLightboxIndex(index)}
+                        renderPhoto={({ photo, imageProps }) => (
+                            <Image
+                                {...imageProps}
+                                className="rounded-xl object-cover hover:brightness-90 transition"
+                                style={{ cursor: "zoom-in" }}
+                            />
+                        )}
+                    />
+                    {lightboxIndex >= 0 && (
+                        <ImageLightbox
+                            src={photos[lightboxIndex].src}
+                            alt={photos[lightboxIndex].alt}
+                            onClose={() => setLightboxIndex(-1)}
+                        />
+                    )}
+                </div>
+
+                {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    這裡假設你的 gallery 有一個 images: [] 屬性，存所有照片
                     {(gallery.images || []).map((img) => (
                         <ImageLightbox
                             key={img.src}
@@ -54,7 +88,7 @@ export default function GalleryPage({ params }) {
                             className="rounded-xl object-cover w-full h-52"
                         />
                     ))}
-                </div>
+                </div> */}
                 {/* 這裡可做下滑自動加載更多的設計 */}
             </main>
             <div className="border-t border-gray-700 pt-8 mx-4 md:mx-12">
