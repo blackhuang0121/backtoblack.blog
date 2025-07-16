@@ -32,12 +32,12 @@ export default function ImageLightbox({ src, alt, ...props }) {
                 close={() => setOpen(false)}
                 slides={[{ src, alt }]}
                 plugins={[Zoom]}
-                closeOnBackdropClick
-                carousel={false}
-            // render={{
-            // buttonPrev: () => null,
-            // buttonNext: () => null
-            // }}
+                animation={{ zoom: 125 }}
+                closeOnBackdropClick={true}
+                render={{
+                    buttonPrev: () => null,
+                    buttonNext: () => null
+                }}
             />
         </>
     );
