@@ -271,27 +271,39 @@
         "images": [
             {
                 "src": "https://live.staticflickr.com/65535/54646319049_8a999ab930_b.jpg",
-                "alt": "Kamo river in Kyoto"
+                "alt": "Kamo river in Kyoto",
+                "width": 1024,
+                "height": 680
             },
             {
                 "src": "https://live.staticflickr.com/65535/54645244542_17587c0698_b.jpg",
-                "alt": "Night Vibes"
+                "alt": "Night Vibes",
+                "width": 1024,
+                "height": 680
             },
             {
                 "src": "https://live.staticflickr.com/65535/54645246007_7694fc079d_b.jpg",
-                "alt": "Kyoto"
+                "alt": "Kyoto",
+                "width": 680,
+                "height": 1024
             },
             {
                 "src": "https://live.staticflickr.com/65535/54646411095_1149322d3a_b.jpg",
-                "alt": "Bicycle"
+                "alt": "Bicycle",
+                "width": 680,
+                "height": 1024
             },
             {
                 "src": "https://live.staticflickr.com/65535/54646410800_88c3cc2562_b.jpg",
-                "alt": "Osaka"
+                "alt": "Osaka",
+                "width": 680,
+                "height": 1024
             },
             {
                 "src": "https://live.staticflickr.com/65535/54646411200_65cf371cbe_b.jpg",
-                "alt": "Vending machine"
+                "alt": "Vending machine",
+                "width": 679,
+                "height": 1024
             }
         ]
     },
