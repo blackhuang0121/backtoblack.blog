@@ -114,3 +114,39 @@ body.dark {
   color: inherit;
   /* 保持與 blockquote 一致 */
 }
+
+/* 多行程式碼區塊 */
+.prose pre {
+  background: #202124;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 0.8em;
+  padding: 1em 1.2em;
+  margin: 2em 0;
+  overflow-x: auto;
+  line-height: 1.7;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.prose pre code {
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* 單行程式碼（inline code） */
+.prose code {
+  background: #232323;
+  color: #ffe066;
+  border-radius: 4px;
+  padding: 0.1em 0.5em;
+  font-size: 0.96em;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+}
+
+.prose pre,
+.prose code {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'monospace';
+}
