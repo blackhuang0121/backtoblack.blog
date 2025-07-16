@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import ImageLightbox from "@/components/ImageLightbox";
 
 export default function GalleryPage({ params }) {
     const gallery = galleries.find(g => g.id === params.gallery);
@@ -44,7 +45,7 @@ export default function GalleryPage({ params }) {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {/* 這裡假設你的 gallery 有一個 images: [] 屬性，存所有照片 */}
                     {(gallery.images || []).map((img) => (
-                        <Image
+                        <ImageLightbox
                             key={img.src}
                             src={img.src}
                             width={400}          // 這裡你可以根據你需求自訂寬度

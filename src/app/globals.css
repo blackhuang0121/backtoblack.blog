@@ -33,6 +33,17 @@ body.dark {
   --foreground: #ededed;
 }
 
+/* 讓 close 按鈕 hover 變色為 tailwind 黃色 #facc15 */
+.yarl__button_close svg {
+  transition: fill 0.2s;
+}
+
+.yarl__button_close:hover svg {
+  fill: #facc15 !important;
+  /* Tailwind 的 yellow-400 */
+}
+
+
 .prose img,
 .markdown-body img {
   max-width: 70%;
