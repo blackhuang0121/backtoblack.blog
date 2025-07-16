@@ -33,6 +33,11 @@ body.dark {
   --foreground: #ededed;
 }
 
+.yarl__toolbarButton--close:hover {
+  color: #FACC15;
+  transition: color 0.2s;
+}
+
 .prose img,
 .markdown-body img {
   max-width: 70%;

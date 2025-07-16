@@ -13,7 +13,7 @@ export default function ImageLightbox({ src, alt, ...props }) {
             {/* 圖片本身，點擊時打開 lightbox */}
             <Image
                 src={src}
-                alt={alt} ㄐ
+                alt={alt}
                 onClick={() => setOpen(true)}
                 style={{
                     cursor: "zoom-in",
@@ -31,9 +31,9 @@ export default function ImageLightbox({ src, alt, ...props }) {
                 open={open}
                 close={() => setOpen(false)}
                 slides={[{ src, alt }]}
-                // plugins={[Zoom]}
-                animation={{ zoom: 100 }}
-                closeOnBackdropClick={true}
+                plugins={[Zoom]}
+                animation={{ zoom: 50 }}
+                // closeOnBackdropClick={true}
                 render={{
                     buttonPrev: () => null,
                     buttonNext: () => null
