@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import Zoom from "yet-another-react-lightbox";
+// import Zoom from "yet-another-react-lightbox";
 import Image from "next/image";
 
 export default function ImageLightbox({ src, alt, ...props }) {
@@ -31,8 +31,8 @@ export default function ImageLightbox({ src, alt, ...props }) {
                 open={open}
                 close={() => setOpen(false)}
                 slides={[{ src, alt }]}
-                plugins={[Zoom]}
-                animation={{ zoom: 125 }}
+                // plugins={[Zoom]}
+                animation={{ zoom: 100 }}
                 closeOnBackdropClick={true}
                 render={{
                     buttonPrev: () => null,
