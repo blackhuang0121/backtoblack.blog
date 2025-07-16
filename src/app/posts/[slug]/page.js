@@ -1,4 +1,6 @@
 import ReactMarkdown from 'react-markdown';
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/github-dark.css'; // 可換成你喜歡的 highlight 樣式
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -70,7 +72,7 @@ export default function PostPage({ params }) {
                     <hr className="my-10 border-gray-600" />
 
                     <div className="prose prose-invert max-w-3xl mx-auto">
-                        <ReactMarkdown
+                        <ReactMarkdown rehypePlugins={[rehypeHighlight]}
                             components={{
                                 img: ({ node, ...props }) => (
                                     <ImageLightbox src={props.src} alt={props.alt} />
