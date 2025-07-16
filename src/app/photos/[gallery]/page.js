@@ -8,18 +8,18 @@ import Link from "next/link";
 import ImageLightbox from "@/components/ImageLightbox";
 import PhotoAlbum from "react-photo-album";
 
+
 export default function GalleryPage({ params }) {
-    const photos = (gallery.images || []).map(img => ({
+    const gallery = galleries.find(g => g.id === params.gallery);
+    if (!gallery) return <div>Not found</div>;
+
+    // 將 images 改為 photo-album 需要的格式
+    const photos = gallery.images.map(img => ({
         src: img.src,
-        width: img.src.includes("1025") ? 1025 : 679,
-        height: img.src.includes("1025") ? 679 : 1024,
-        alt: img.alt || gallery.title,
+        width: img.width,    // 你需要補這兩個欄位（預設數字）
+        height: img.height,
+        alt: img.alt
     }));
-
-    const [lightboxIndex, setLightboxIndex] = useState(-1);
-    //   if (!gallery) return <div>Not found</div>;
-
-
 
     // **排序，並找 index**
     const sortedGalleries = galleries.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -58,6 +58,13 @@ export default function GalleryPage({ params }) {
                     <PhotoAlbum
                         layout="rows"
                         photos={photos}
+                        renderPhoto={({ photo, imageProps }) => (
+                            <ImageLightbox src={photo.src} alt={photo.alt} />
+                        )}
+                    />
+                    {/* <PhotoAlbum
+                        layout="rows"
+                        photos={photos}
                         onClick={({ index }) => setLightboxIndex(index)}
                         renderPhoto={({ photo, imageProps }) => (
                             <Image
@@ -72,8 +79,7 @@ export default function GalleryPage({ params }) {
                             src={photos[lightboxIndex].src}
                             alt={photos[lightboxIndex].alt}
                             onClose={() => setLightboxIndex(-1)}
-                        />
-                    )}
+                        /> */}
                 </div>
 
                 {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
