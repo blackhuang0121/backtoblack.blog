@@ -3,7 +3,7 @@ title: "關於 Nest.js Blog - 我的部落格「backtoblack.blog」上線啦！"
 draft: false
 date: "2025-07-15"
 travel_date: ""
-cover: "/img/nextjsblog/nextjsblog1.png"
+cover: "/img/nextjsblog/201389970005.JPEG"
 description: "分享從手刻到使用 Next.js 框架架站、Markdown 直接撰寫內容，以及使用 Vercel 部署、透過 Git 在 GitHub 做版本控管的心路歷程。"
 category: "essays"
 tags: ["隨筆", "前端", "Next.js", "Vercel",]
@@ -130,10 +130,9 @@ npm install yet-another-react-lightbox ## 支援內文圖片可點擊放大
 目前部落格類別安排了旅遊、相簿，以及隨筆，其中旅遊與隨筆是文章格式，相簿現階段則是希望把拍過的照片，用照片牆的方式展出，因此簡單利用 Json 陣列物件，存取多個陣列，每個陣列代表一個相簿，相簿的照片可點擊放大縮小。
 
 ![Photos json](/img/nextjsblog/nextjsblog19.png)
-![Photos json](/img/nextjsblog/nextjsblog20.png)
-![Photos json](/img/nextjsblog/nextjsblog21.png)
-![Photos json](/img/nextjsblog/nextjsblog22.png)
-![Photos json](/img/nextjsblog/nextjsblog23.png)
+![Photos](/img/nextjsblog/nextjsblog20.png)
+![Photos page](/img/nextjsblog/nextjsblog22.png)
+![Photos page-2](/img/nextjsblog/nextjsblog23.png)
 
 ## 結合 Vercel 完成部署
 
@@ -151,12 +150,10 @@ npm install yet-another-react-lightbox ## 支援內文圖片可點擊放大
 先簡單復盤一下使用到的內容：
 1. Next.js：React 架構，負責前端渲染（支援 SSG/SSR/ISR）、SEO、路由、資料取得。
 2. Vercel：部署平台，與 GitHub 連動，每次 push 自動部署新版網站。
-3. 內容儲存：
-   - Markdown（文章）
-   - JSON/陣列（相簿）
-4.  圖片：主要集中存放在 Flickr，動態拉取。
-5. 內容管理：可用如 Notion /自製後台 / 第三方 headless CMS（保留未來彈性擴充空間）。
-6. 其他：使用 Git 管理版本，也設置 GitHub Actions，每當 push 回 main 後，即會把目前內容的 metadata 抓到 gsheet 保存。
+3. 內容儲存：Markdown（文章）/ JSON/陣列（相簿）
+1.  圖片：主要集中存放在 Flickr，動態拉取。
+2. 內容管理：可用如 Notion /自製後台 / 第三方 headless CMS（保留未來彈性擴充空間）。
+3. 其他：使用 Git 管理版本，也設置 GitHub Actions，每當 push 回 main 後，即會把目前內容的 metadata 抓到 gsheet 保存。
 
 > "Don't wait for the tide just to dip both your feet in." - Beabadoobee
 
