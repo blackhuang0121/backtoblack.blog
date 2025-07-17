@@ -51,3 +51,5 @@ code 用法如下：
 const message = "Hello World!";
 console.log(message);
 ```
+
+我就開始在 VS Code 安裝 Next.js 套件 `npm install create-next-app`，先拿做 [我的 Frontend projects](https://frontend-projects-zeta-ivory.vercel.app/) 測試一次，
