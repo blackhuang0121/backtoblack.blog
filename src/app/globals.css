@@ -65,6 +65,10 @@ body.dark {
   padding-left: 0.7em;
 }
 
+.prose p {
+  margin-bottom: 1em;
+}
+
 .prose hr {
   margin: 2em 0;
   border-color: #333;
@@ -113,6 +117,21 @@ body.dark {
   margin: 0;
   color: inherit;
   /* 保持與 blockquote 一致 */
+}
+
+.prose a {
+  color: #fff;
+  text-decoration: underline;
+  /* 永遠有底線 */
+  text-underline-offset: 2px;
+  /* 底線距離字的距離 */
+  transition: color 0.2s;
+}
+
+.prose a:hover,
+.prose a:focus {
+  color: #ffe066;
+  cursor: pointer;
 }
 
 /* 多行程式碼區塊 */
