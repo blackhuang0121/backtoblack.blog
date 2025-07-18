@@ -14,6 +14,7 @@ export default {
     images: {
         domains: [
             "live.staticflickr.com",
+            "staging-jubilee.flickr.com",
         ],
     },
 };
