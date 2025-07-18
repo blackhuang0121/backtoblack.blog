@@ -408,5 +408,139 @@
                 "alt": "Saxophone"
             }
         ]
+    },
+    {
+        "id": "berlin-2025",
+        "draft": false,
+        "title": "關於柏林",
+        "date": "2025-07-19",
+        "travel_date": "2025-04-08",
+        "cover": "https://staging-jubilee.flickr.com/65535/54663512899_5a49286781_b.jpg",
+        "description": "值得慢慢走訪的城市",
+        "category": "photos",
+        "tags": [
+            "攝影",
+            "德國",
+            "柏林"
+        ],
+        "city": "柏林",
+        "country": "德國",
+        "images": [
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663493773_c3cd245226_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663593750_da71ea9998_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663602845_274e0e1ed3_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54662447712_dc758fcd72_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663267306_03b528a466_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54662436512_c50ee93d48_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54662434302_b82ddcf74a_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663504838_1ce5873921_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663504233_01662bef49_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663606960_d37b62716b_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663512444_45a427abef_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54662446157_d9cec29a0c_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54662437562_c51f014ca3_b.jpg",
+                "alt": "Berlin"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663503163_0a737bf41c_b.jpg",
+                "alt": "Berlin"
+            }
+        ]
+    },
+    {
+        "id": "Tavira-2025",
+        "draft": false,
+        "title": "南葡小鎮——塔維拉",
+        "date": "2025-07-18",
+        "travel_date": "2025-03-29",
+        "cover": "https://staging-jubilee.flickr.com/65535/54663251466_1c7ae32ca3_b.jpg",
+        "description": "南葡漫遊",
+        "category": "photos",
+        "tags": [
+            "攝影",
+            "葡萄牙",
+            "塔維拉"
+        ],
+        "city": "塔維拉",
+        "country": "葡萄牙",
+        "images": [
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663478579_450edcd20b_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663251466_1c7ae32ca3_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663575980_4600f49810_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54662416977_f777cd390e_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663253266_39d111b395_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663579390_8a68d1656f_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663572595_96d613ff57_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663245301_86b71196e2_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663245736_140f39752a_b.jpg",
+                "alt": "Tavira"
+            },
+            {
+                "src": "https://staging-jubilee.flickr.com/65535/54663470898_130d02cc9a_z.jpg",
+                "alt": "Tavira"
+            }
+        ]
     }
 ]
