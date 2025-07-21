@@ -15,6 +15,7 @@ export default {
         domains: [
             "live.staticflickr.com",
             "staging-jubilee.flickr.com",
+            "res.cloudinary.com",
         ],
     },
 };
