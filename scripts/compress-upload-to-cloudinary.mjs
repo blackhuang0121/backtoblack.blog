@@ -8,11 +8,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const srcDir = '/Users/e0121n/Pictures/Fujifilm/Hamburg_selected';   // 精選原圖資料夾
-const outDir = '/Users/e0121n/Pictures/Fujifilm/Hamburg_selected_compressed';        // 壓縮後新資料夾
+const srcDir = '/Users/e0121n/Pictures/Fujifilm/Sydney_selected';   // 精選原圖資料夾
+const outDir = '/Users/e0121n/Pictures/Fujifilm/Sydney_selected_compressed';        // 壓縮後新資料夾
 const resizeWidth = 1920;                       // 長邊像素，可調整
 const jpegQuality = 80;                         // 壓縮畫質，可調整
-const cloudFolder = 'Hamburg-2025';               // Cloudinary 雲端相簿目錄
+const cloudFolder = 'Sydney-2023';               // Cloudinary 雲端相簿目錄
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -23,17 +23,17 @@ cloudinary.config({
 // 要 append/覆蓋進去的 galleries.json 路徑
 const galleriesPath = './src/app/photos/data/galleries.json';
 // 當前要新增/更新的相簿欄位
-const albumId = 'Hamburg-2025';
-const albumTitle = '十日德國獨旅之二：漢堡';
+const albumId = 'Sydney-2023';
+const albumTitle = '澳洲之三：雪梨夜未眠';
 const albumDraft = false;
-const albumDate = '2025-07-22';
-const albumTravelDate = '2025-04-12';
+const albumDate = '2023-04-14';
+const albumTravelDate = '2023-04-06';
 // const albumCover = ... // <<== 這行不用在外面宣告
-const albumDescription = 'FujiFilm X-T30 II | 18-55mm & 27mm | Eterna Daily';
+const albumDescription = 'Olympus Trip 35 | Kodak Gold 200';
 const albumCategory = 'photos';
-const albumTags = ['攝影', '德國', '漢堡'];
-const albumCity = 'Hamburg';
-const albumCountry = 'Germany';
+const albumTags = ['攝影', 'Australia', 'Sydney', 'Film'];
+const albumCity = 'Sydney';
+const albumCountry = 'Australia';
 
 async function compressAndUploadAll() {
   // 準備壓縮後資料夾
