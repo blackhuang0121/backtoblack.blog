@@ -1,8 +1,8 @@
 ---
 title: "澳洲｜2023 F1 澳洲大獎賽－上篇：排位賽"
-draft: true
-date: "2025-07-24"
-travel_date: "2023-04-01"
+draft: false
+date: "2025-08-23"
+travel_date: "2023-03-31"
 cover: "https://res.cloudinary.com/dvnesaiv5/image/upload/v1753291648/f1_autralia_grand_prix_2023/201533320012.jpg"
 description: "從 Netlix F1 紀錄片 Drive to Survive 到親臨現場一睹賽況，夢迴 2023 年 F1 澳洲大獎賽！－上篇：排位賽"
 category: "trips"
