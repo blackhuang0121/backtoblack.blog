@@ -1,10 +1,10 @@
 ---
-title: "澳洲｜2023 F1 澳洲大獎賽－上篇：正賽"
+title: "澳洲｜2023 F1 澳洲大獎賽－下篇：正賽"
 draft: false
 date: "2025-08-04"
 travel_date: "2023-04-02"
 cover: "https://res.cloudinary.com/dvnesaiv5/image/upload/v1753291667/f1_autralia_grand_prix_2023/201533320022.jpg"
-description: "從 Netlix F1 紀錄片 Drive to Survive 到親臨現場一睹賽況，夢迴 2023 年 F1 澳洲大獎賽！－上篇：正賽"
+description: "從 Netlix F1 紀錄片 Drive to Survive 到親臨現場一睹賽況，夢迴 2023 年 F1 澳洲大獎賽！－下篇：正賽"
 category: "trips"
 tags: ["大洋洲", "Australia", "Melbourne", "F1"]
 city: "Melbourne"
@@ -96,7 +96,7 @@ country: "Australia"
 
 排了不少時間終於進入室內，車隊連實體賽車都搬過來了，真的很用心，喜獲與當時的美國新秀車手 Logan Sargeant 的合照與簽名一張～
 
-PS Sargeant 自 2023 年以來只跑了一年多的時間，2024 年季中便因成績不理想與撞壞太多次車（破百萬美金維修費）而離開 F1 舞台了，真是殘酷的競爭世界呀，祝福他一切都好。
+PS Sargeant 自 2023 年以來只跑了一年多的時間，2024 年季中便因成績不理想與撞壞太多次車（據稱破百萬美金維修費）而離開 F1 舞台了，真是殘酷的競爭世界呀，祝福他一切都好。
 
 ![IMG_7821_uxwwns.jpg](https://res.cloudinary.com/dvnesaiv5/image/upload/v1754293021/IMG_7826_vkntt8.jpg)
 ![IMG_7832_ytcon0.jpg](https://res.cloudinary.com/dvnesaiv5/image/upload/v1754293012/IMG_7832_ytcon0.jpg)
