@@ -2,8 +2,8 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const srcDir = '/Users/e0121n/Pictures/Fujifilm/f1_autralia_grand_prix_2023_iphone';   // 精選原圖資料夾
-const outDir = '/Users/e0121n/Pictures/Fujifilm/f1_autralia_grand_prix_2023_iphone_compressed';        // 壓縮後新資料夾
+const srcDir = '/Users/e0121n/Pictures/Fujifilm/1234';   // 精選原圖資料夾
+const outDir = '/Users/e0121n/Pictures/Fujifilm/1234_compressed';        // 壓縮後新資料夾
 const resizeWidth = 1920;                       // 長邊像素，可調整
 const jpegQuality = 80;                         // 壓縮畫質，可調整
 
