@@ -18,7 +18,7 @@
     "googleapis": "^127.0.0",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
-    "next": "15.3.5",
+    "next": "15.3.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
