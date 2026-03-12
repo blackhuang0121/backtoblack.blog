@@ -8,12 +8,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const srcDir = '/Users/e0121n/Pictures/Fujifilm/f1_autralia_grand_prix_2023_selected';           // 精選圖資料夾
-const outDir = '/Users/e0121n/Pictures/Fujifilm/f1_autralia_grand_prix_2023_selected_compressed';       // 壓縮資料夾
+const srcDir = '/Users/e0121n/Pictures/Fujifilm/Portugal_Tavira_selected';           // 精選圖資料夾
+const outDir = '/Users/e0121n/Pictures/Creatives/Portugal_Tavira_selected_compressed';       // 壓縮資料夾
 const resizeWidth = 1920;
 const jpegQuality = 80;
-const cloudFolder = 'f1_autralia_grand_prix_2023';               // Cloudinary 目錄
-const markdownOutput = './posts/f1_autralia_grand_prix_2023.md'; // 輸出 markdown 文章檔案
+const cloudFolder = 'Euro_2025_Portugal_Tavira';               // Cloudinary 目錄
+const markdownOutput = './posts/euro_2025_portugal_tavira.md'; // 輸出 markdown 文章檔案
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -23,16 +23,16 @@ cloudinary.config({
 
 // metadata 欄位
 const postMeta = {
-  title: '荷蘭｜2025 國王節',
+  title: '塔維拉｜與然哥的南葡小鎮遊',
   draft: true,
-  date: '2025-07-24',
-  travel_date: '2023-04-01',
+  date: '2026-03-11',
+  travel_date: '2025-03-28',
   cover: '', // 等下自動塞第一張圖網址
-  description: '從 Netlix F1 紀錄片 Drive to Survive 到親臨現場一睹賽況，夢迴 2023 年 F1 澳洲大獎賽！',
+  description: '一直都想去南歐走走，剛好第二次飛歐洲的時間比較充裕，原本規劃葡萄牙、西班牙一起走跳，後來想讓旅途的步調慢些，便選了專心在葡萄牙走跳—，第一站便直接一路往南飛，直衝國境之南的小鎮——塔維拉！',
   category: 'trips',
-  tags: ['大洋洲', 'Australia', 'Melbourne', 'F1'],
-  city: 'Melbourne',
-  country: 'Australia'
+  tags: ['歐洲', '葡萄牙', '塔維拉'],
+  city: 'Tavira',
+  country: 'Portugal'
 };
 
 async function compressUploadAndGenerateMarkdown() {
