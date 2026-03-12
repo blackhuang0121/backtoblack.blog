@@ -8,11 +8,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const srcDir = '/Users/e0121n/Pictures/Fujifilm/Tokyo_2025_selected';   // 精選原圖資料夾
-const outDir = '/Users/e0121n/Pictures/Fujifilm/Tokyo_2025_selected_compressed';        // 壓縮後新資料夾
+const srcDir = '/Users/e0121n/Pictures/Blog/Portugal_Lisbon_selected';   // 精選原圖資料夾
+const outDir = '/Users/e0121n/Pictures/Creatives/Portugal_Lisbon_selected_compressed';        // 壓縮後新資料夾
 const resizeWidth = 1920;                       // 長邊像素，可調整
 const jpegQuality = 80;                         // 壓縮畫質，可調整
-const cloudFolder = 'Tokyo-2025';               // Cloudinary 雲端相簿目錄
+const cloudFolder = 'Euro_2025_Portugal_Lisbon';               // Cloudinary 雲端相簿目錄
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -23,17 +23,17 @@ cloudinary.config({
 // 要 append/覆蓋進去的 galleries.json 路徑
 const galleriesPath = './src/app/photos/data/galleries.json';
 // 當前要新增/更新的相簿欄位
-const albumId = 'Tokyo-2025';
-const albumTitle = 'Tokyo Dump：鴨蔥、晴空塔與大相撲';
+const albumId = 'Euro_2025_Portugal_Lisbon';
+const albumTitle = '關於里斯本的蛋塔、黃色電車與好天氣';
 const albumDraft = false;
-const albumDate = '2026-03-08';
-const albumTravelDate = '2025-09-20';
+const albumDate = '2026-03-12';
+const albumTravelDate = '2025-03-31';
 // const albumCover = ... // <<== 這行不用在外面宣告
-const albumDescription = 'Fujifilm X-T30 II | 18-55mm & 70-300mm | Fujifilm Blue & Fujifilm Superia X-TRA 400 at day/night';
+const albumDescription = 'Fujifilm X-T30 II | 18-55mm | Fujifilm Blue at day';
 const albumCategory = 'photos';
-const albumTags = ['Japan', 'Tokyo', 'Fuji', 'Fujifilm'];
-const albumCity = 'Tokyo';
-const albumCountry = 'Japan';
+const albumTags = ['攝影', '蛋塔', '電車', 'Portugal', 'Lisbon', 'Fujifilm'];
+const albumCity = 'Lisbon';
+const albumCountry = 'Portugal';
 
 async function compressAndUploadAll() {
   // 準備壓縮後資料夾
