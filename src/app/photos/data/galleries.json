@@ -1218,7 +1218,7 @@
         "date": "2026-03-12",
         "travel_date": "2025-03-31",
         "cover": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773320235/Euro_2025_Portugal_Lisbon/DSCF3125.jpg",
-        "description": "Fujifilm X-T30 II | 18-55mm | Fujifilm Blue at day",
+        "description": "Fujifilm X-T30 II | 18-55mm | Eterna at day",
         "category": "photos",
         "tags": [
             "攝影",
@@ -1350,6 +1350,220 @@
             {
                 "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773320319/Euro_2025_Portugal_Lisbon/DSCF3221.jpg",
                 "alt": "DSCF3221.JPG"
+            }
+        ]
+    },
+    {
+        "id": "Euro_2025_Portugal_Porto",
+        "title": "關於波多：喝不完的波特酒、Super Bock 與鐵橋",
+        "draft": false,
+        "date": "2026-03-13",
+        "travel_date": "2025-04-02",
+        "cover": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322028/Euro_2025_Portugal_Porto/DSCF3633.jpg",
+        "description": "Fujifilm X-T30 II | 18-55mm | Eterna at day",
+        "category": "photos",
+        "tags": [
+            "攝影",
+            "波特酒",
+            "路易一世大橋",
+            "Portugal",
+            "Porto",
+            "Fujifilm"
+        ],
+        "city": "Porto",
+        "country": "Portugal",
+        "images": [
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322028/Euro_2025_Portugal_Porto/DSCF3270.jpg",
+                "alt": "DSCF3270.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322036/Euro_2025_Portugal_Porto/DSCF3276.jpg",
+                "alt": "DSCF3276.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322039/Euro_2025_Portugal_Porto/DSCF3279.jpg",
+                "alt": "DSCF3279.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322042/Euro_2025_Portugal_Porto/DSCF3285.jpg",
+                "alt": "DSCF3285.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322051/Euro_2025_Portugal_Porto/DSCF3294.jpg",
+                "alt": "DSCF3294.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322054/Euro_2025_Portugal_Porto/DSCF3305.jpg",
+                "alt": "DSCF3305.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322057/Euro_2025_Portugal_Porto/DSCF3322.jpg",
+                "alt": "DSCF3322.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322060/Euro_2025_Portugal_Porto/DSCF3323.jpg",
+                "alt": "DSCF3323.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322062/Euro_2025_Portugal_Porto/DSCF3326.jpg",
+                "alt": "DSCF3326.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322065/Euro_2025_Portugal_Porto/DSCF3334.jpg",
+                "alt": "DSCF3334.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322069/Euro_2025_Portugal_Porto/DSCF3345.jpg",
+                "alt": "DSCF3345.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322072/Euro_2025_Portugal_Porto/DSCF3353.jpg",
+                "alt": "DSCF3353.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322075/Euro_2025_Portugal_Porto/DSCF3360.jpg",
+                "alt": "DSCF3360.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322077/Euro_2025_Portugal_Porto/DSCF3362.jpg",
+                "alt": "DSCF3362.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322081/Euro_2025_Portugal_Porto/DSCF3377.jpg",
+                "alt": "DSCF3377.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322084/Euro_2025_Portugal_Porto/DSCF3381.jpg",
+                "alt": "DSCF3381.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322086/Euro_2025_Portugal_Porto/DSCF3390.jpg",
+                "alt": "DSCF3390.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322090/Euro_2025_Portugal_Porto/DSCF3402.jpg",
+                "alt": "DSCF3402.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322093/Euro_2025_Portugal_Porto/DSCF3413.jpg",
+                "alt": "DSCF3413.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322096/Euro_2025_Portugal_Porto/DSCF3444.jpg",
+                "alt": "DSCF3444.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322099/Euro_2025_Portugal_Porto/DSCF3445.jpg",
+                "alt": "DSCF3445.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322103/Euro_2025_Portugal_Porto/DSCF3446.jpg",
+                "alt": "DSCF3446.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322105/Euro_2025_Portugal_Porto/DSCF3453.jpg",
+                "alt": "DSCF3453.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322109/Euro_2025_Portugal_Porto/DSCF3455.jpg",
+                "alt": "DSCF3455.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322113/Euro_2025_Portugal_Porto/DSCF3462.jpg",
+                "alt": "DSCF3462.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322116/Euro_2025_Portugal_Porto/DSCF3491.jpg",
+                "alt": "DSCF3491.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322119/Euro_2025_Portugal_Porto/DSCF3499.jpg",
+                "alt": "DSCF3499.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322121/Euro_2025_Portugal_Porto/DSCF3543.jpg",
+                "alt": "DSCF3543.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322123/Euro_2025_Portugal_Porto/DSCF3559.jpg",
+                "alt": "DSCF3559.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322126/Euro_2025_Portugal_Porto/DSCF3566.jpg",
+                "alt": "DSCF3566.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322129/Euro_2025_Portugal_Porto/DSCF3567.jpg",
+                "alt": "DSCF3567.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322132/Euro_2025_Portugal_Porto/DSCF3569.jpg",
+                "alt": "DSCF3569.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322135/Euro_2025_Portugal_Porto/DSCF3578.jpg",
+                "alt": "DSCF3578.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322138/Euro_2025_Portugal_Porto/DSCF3583.jpg",
+                "alt": "DSCF3583.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322143/Euro_2025_Portugal_Porto/DSCF3586.jpg",
+                "alt": "DSCF3586.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322146/Euro_2025_Portugal_Porto/DSCF3594.jpg",
+                "alt": "DSCF3594.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322149/Euro_2025_Portugal_Porto/DSCF3604.jpg",
+                "alt": "DSCF3604.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322152/Euro_2025_Portugal_Porto/DSCF3619.jpg",
+                "alt": "DSCF3619.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322154/Euro_2025_Portugal_Porto/DSCF3633.jpg",
+                "alt": "DSCF3633.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322157/Euro_2025_Portugal_Porto/DSCF3648.jpg",
+                "alt": "DSCF3648.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322160/Euro_2025_Portugal_Porto/DSCF3661.jpg",
+                "alt": "DSCF3661.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322163/Euro_2025_Portugal_Porto/DSCF3673.jpg",
+                "alt": "DSCF3673.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322167/Euro_2025_Portugal_Porto/DSCF3682.jpg",
+                "alt": "DSCF3682.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322169/Euro_2025_Portugal_Porto/DSCF3696.jpg",
+                "alt": "DSCF3696.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322172/Euro_2025_Portugal_Porto/DSCF3704.jpg",
+                "alt": "DSCF3704.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322174/Euro_2025_Portugal_Porto/DSCF3713.jpg",
+                "alt": "DSCF3713.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322177/Euro_2025_Portugal_Porto/DSCF3737.jpg",
+                "alt": "DSCF3737.JPG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773322180/Euro_2025_Portugal_Porto/DSCF3744.jpg",
+                "alt": "DSCF3744.JPG"
             }
         ]
     }
