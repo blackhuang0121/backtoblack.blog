@@ -1,6 +1,5 @@
 // 從 Notion 讀取 metadata，建立 Post Markdown 或 Photo JSON
 
-import fetch from 'node-fetch';
 import { Client } from '@notionhq/client';
 import { NotionToMarkdown } from 'notion-to-md';
 import fs from 'fs';
@@ -43,7 +42,7 @@ async function createMarkdown() {
         // 篩選 Status = Draft 的 pages（如果有指定 postId 則再篩選）
         const draftPages = allPages.filter(p => {
             const pageStatus = p.properties['Status']?.status?.name;
-            const pagePostId = p.properties['Post ID']?.rich_text?.[0]?.plain_text;
+            const pagePostId = p.properties['ID']?.rich_text?.[0]?.plain_text;
 
             // 如果有指定 postId，則必須同時符合 Status=Draft 和 Post ID
             if (postId) {
@@ -55,13 +54,13 @@ async function createMarkdown() {
 
         console.log(`\n📋 找到 ${draftPages.length} 筆 Status=Draft 的資料（總共 ${allPages.length} 筆）：`);
         draftPages.forEach((page, index) => {
-            const postIdValue = page.properties['Post ID']?.rich_text?.[0]?.plain_text || '(無)';
+            const postIdValue = page.properties['ID']?.rich_text?.[0]?.plain_text || '(無)';
             const titleValue = page.properties['Title']?.title?.[0]?.plain_text || '(無標題)';
-            console.log(`  ${index + 1}. Post ID: "${postIdValue}" | Title: "${titleValue}"`);
+            console.log(`  ${index + 1}. ID: "${postIdValue}" | Title: "${titleValue}"`);
         });
 
         if (draftPages.length === 0) {
-            console.error(`\n❌ 找不到 Status=Draft 的資料${postId ? ` (Post ID: ${postId})` : ''}`);
+            console.error(`\n❌ 找不到 Status=Draft 的資料${postId ? ` (ID: ${postId})` : ''}`);
             process.exit(1);
         }
 
@@ -74,11 +73,11 @@ async function createMarkdown() {
         for (const page of draftPages) {
             try {
                 const properties = page.properties;
-                const pagePostId = properties['Post ID']?.rich_text?.[0]?.plain_text;
+                const pagePostId = properties['ID']?.rich_text?.[0]?.plain_text;
                 const pageType = properties['Type']?.select?.name;
 
                 if (!pagePostId) {
-                    console.warn(`⚠️  跳過：沒有 Post ID 的資料`);
+                    console.warn(`⚠️  跳過：沒有 ID 的資料`);
                     if (pageType === 'Post') postSkipped++;
                     else if (pageType === 'Photo') photoSkipped++;
                     continue;
@@ -232,7 +231,9 @@ function generateFrontmatter(meta) {
     let yaml = '---\n';
     for (const [k, v] of Object.entries(meta)) {
         if (Array.isArray(v)) {
-            yaml += `${k}: [${v.map(e => `"${e}"`).join(', ')}]\n`;
+            // 過濾掉空字串，確保空陣列輸出 []
+            const filtered = v.filter(e => e && e.trim() !== '');
+            yaml += `${k}: [${filtered.map(e => `"${e}"`).join(', ')}]\n`;
         } else if (typeof v === 'boolean') {
             yaml += `${k}: ${v}\n`;
         } else {
