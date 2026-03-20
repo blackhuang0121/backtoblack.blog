@@ -1,10 +1,10 @@
-// components/PhotoGallery.js
+// components/PhotoGalleryList.js
 import Header from "./Header";
 import Footer from "./Footer";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function PhotoGallery({ galleries, title = "我的相簿" }) {
+export default function PhotoGalleryList({ galleries, title = "我的相簿" }) {
     return (
         <>
             <Header />
@@ -16,17 +16,18 @@ export default function PhotoGallery({ galleries, title = "我的相簿" }) {
                         <Link
                             key={g.id}
                             href={`/photos/${g.id}`}
-                            className="flex bg-neutral-800 rounded-xl overflow-hidden shadow hover:scale-105 transition w-full max-w-4xl mx-auto"
+                            className="flex bg-neutral-800 rounded-xl overflow-hidden shadow hover:scale-105 transition w-full max-w-4xl mx-auto h-48"
                         >
-                            {/* 左側圖片，寬高可自行調整，這裡設 w-60 h-44 */}
-                            <div className="w-60 h-44 flex-shrink-0 relative my-auto">
+                            {/* 左側圖片 - 固定寬度，高度填滿卡片 */}
+                            <div className="w-60 flex-shrink-0 relative h-full">
                                 <Image
                                     src={g.cover}
                                     alt={g.title}
-                                    width={400}          // 這裡你可以根據你需求自訂寬度
-                                    height={300}         // 高度建議配合 w-60 h-44 的比例，或用 16:9 (如 400/225)
-                                    className="object-cover w-full h-full"
-                                />                            </div>
+                                    fill
+                                    sizes="240px"
+                                    className="object-cover"
+                                />
+                            </div>
                             {/* 右側內容 */}
                             <div className="flex flex-col justify-between p-6 min-w-0 flex-1">
                                 <h2 className="text-lg font-bold mb-1">{g.title}</h2>

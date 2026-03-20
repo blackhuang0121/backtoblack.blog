@@ -11,13 +11,13 @@ export default function ImageLightbox({ src, alt, width, height, allImages = [],
     const [open, setOpen] = useState(false);
 
     // 如果有傳入 allImages，使用所有圖片；否則只顯示單張
-    const slides = allImages.length > 0
+    const slides = allImages.length > 0 
         ? allImages.map(img => ({
             src: img.src,
             alt: img.alt || '',
             width: img.width || 1600,
             height: img.height || 900,
-        }))
+          }))
         : [{ src, alt, width: width || 1600, height: height || 900 }];
 
     return (

@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import ImageLightbox from "@/components/ImageLightbox";
+import PhotoAlbumGallery from "@/components/PhotoAlbumGallery";
 
 export default function GalleryPage({ params }) {
     const gallery = galleries.find(g => g.id === params.gallery);
@@ -42,20 +42,7 @@ export default function GalleryPage({ params }) {
                     </div>
                 </div>
                 <hr className="my-8 border-gray-700" />
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {/* 這裡假設你的 gallery 有一個 images: [] 屬性，存所有照片 */}
-                    {(gallery.images || []).map((img) => (
-                        <ImageLightbox
-                            key={img.src}
-                            src={img.src}
-                            width={400}          // 這裡你可以根據你需求自訂寬度
-                            height={300}         // 高度建議配合 w-60 h-44 的比例，或用 16:9 (如 400/225)
-                            alt={img.alt || gallery.title}
-                            className="rounded-xl object-cover w-full h-52"
-                        />
-                    ))}
-                </div>
-                {/* 這裡可做下滑自動加載更多的設計 */}
+                <PhotoAlbumGallery images={gallery.images || []} />
             </main>
             <div className="border-t border-gray-700 pt-8 mx-4 md:mx-12">
                 <div className="flex flex-row justify-between items-center mb-6">
