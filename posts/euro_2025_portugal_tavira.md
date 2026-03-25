@@ -11,21 +11,33 @@ city: "Tavira"
 country: "Portugal"
 ---
 
-文章內文從這裡開始寫
+## 塔維拉 Brick Lane－古著、塗鴉等次文化的聚集地
 
 ![DSCF2423.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244602/Euro_2025_Portugal_Tavira/DSCF2423.jpg)
 ![DSCF2425.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244604/Euro_2025_Portugal_Tavira/DSCF2425.jpg)
 ![DSCF2429.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244607/Euro_2025_Portugal_Tavira/DSCF2429.jpg)
 ![DSCF2432.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244610/Euro_2025_Portugal_Tavira/DSCF2432.jpg)
 ![DSCF2437.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244612/Euro_2025_Portugal_Tavira/DSCF2437.jpg)
+
+塔維拉位於葡萄牙南部，位置比於倫敦東區的塗鴉巷 Brick Lane，以**街道兩旁建築物的牆壁上充滿了塗鴉，聚集多家古著店著稱**，也有多家咖啡店與美食小店開設於此。
+
+塗鴉巷距我們住的飯店徒步約 15 分鐘，一早盥洗完換完裝便與然哥先出發，打算先到塗鴉巷的貝果名店吃早餐再開始探訪這個區域。
+
+---
+
+## 飯店orning, Big Ben!
+
+
 ![DSCF2438.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244616/Euro_2025_Portugal_Tavira/DSCF2438.jpg)
 ![DSCF2440.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244620/Euro_2025_Portugal_Tavira/DSCF2440.jpg)
 ![DSCF2441.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244623/Euro_2025_Portugal_Tavira/DSCF2441.jpg)
 ![DSCF2443.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244625/Euro_2025_Portugal_Tavira/DSCF2443.jpg)
+
 ![DSCF2444.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244628/Euro_2025_Portugal_Tavira/DSCF2444.jpg)
 ![DSCF2451.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244630/Euro_2025_Portugal_Tavira/DSCF2451.jpg)
 ![DSCF2452.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244632/Euro_2025_Portugal_Tavira/DSCF2452.jpg)
 ![DSCF2454.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244634/Euro_2025_Portugal_Tavira/DSCF2454.jpg)
+
 ![DSCF2459.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244636/Euro_2025_Portugal_Tavira/DSCF2459.jpg)
 ![DSCF2460.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244638/Euro_2025_Portugal_Tavira/DSCF2460.jpg)
 ![DSCF2488.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244641/Euro_2025_Portugal_Tavira/DSCF2488.jpg)
@@ -45,6 +57,7 @@ country: "Portugal"
 ![DSCF2611.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244677/Euro_2025_Portugal_Tavira/DSCF2611.jpg)
 ![DSCF2620.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244679/Euro_2025_Portugal_Tavira/DSCF2620.jpg)
 ![DSCF2622.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244681/Euro_2025_Portugal_Tavira/DSCF2622.jpg)
+
 ![DSCF2629.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244683/Euro_2025_Portugal_Tavira/DSCF2629.jpg)
 ![DSCF2630.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244686/Euro_2025_Portugal_Tavira/DSCF2630.jpg)
 ![DSCF2633.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244688/Euro_2025_Portugal_Tavira/DSCF2633.jpg)
@@ -53,6 +66,7 @@ country: "Portugal"
 ![DSCF2644.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244694/Euro_2025_Portugal_Tavira/DSCF2644.jpg)
 ![DSCF2654.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244697/Euro_2025_Portugal_Tavira/DSCF2654.jpg)
 ![DSCF2656.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244699/Euro_2025_Portugal_Tavira/DSCF2656.jpg)
+
 ![DSCF2661.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244701/Euro_2025_Portugal_Tavira/DSCF2661.jpg)
 ![DSCF2664.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244704/Euro_2025_Portugal_Tavira/DSCF2664.jpg)
 ![DSCF2668.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244708/Euro_2025_Portugal_Tavira/DSCF2668.jpg)
@@ -71,6 +85,7 @@ country: "Portugal"
 ![DSCF2746.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244739/Euro_2025_Portugal_Tavira/DSCF2746.jpg)
 ![DSCF2749.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244742/Euro_2025_Portugal_Tavira/DSCF2749.jpg)
 ![DSCF2752.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244744/Euro_2025_Portugal_Tavira/DSCF2752.jpg)
+
 ![DSCF2779.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244747/Euro_2025_Portugal_Tavira/DSCF2779.jpg)
 ![DSCF2781.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244749/Euro_2025_Portugal_Tavira/DSCF2781.jpg)
 ![DSCF2788.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244751/Euro_2025_Portugal_Tavira/DSCF2788.jpg)
@@ -79,18 +94,27 @@ country: "Portugal"
 ![DSCF2794.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244758/Euro_2025_Portugal_Tavira/DSCF2794.jpg)
 ![DSCF2806.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244760/Euro_2025_Portugal_Tavira/DSCF2806.jpg)
 ![DSCF2810.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244762/Euro_2025_Portugal_Tavira/DSCF2810.jpg)
+
+
 ![DSCF2813.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244765/Euro_2025_Portugal_Tavira/DSCF2813.jpg)
 ![DSCF2814.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244767/Euro_2025_Portugal_Tavira/DSCF2814.jpg)
+
 ![DSCF2819.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244770/Euro_2025_Portugal_Tavira/DSCF2819.jpg)
 ![DSCF2823.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244772/Euro_2025_Portugal_Tavira/DSCF2823.jpg)
 ![DSCF2827.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244774/Euro_2025_Portugal_Tavira/DSCF2827.jpg)
 ![DSCF2831.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244777/Euro_2025_Portugal_Tavira/DSCF2831.jpg)
+
 ![DSCF2836.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244779/Euro_2025_Portugal_Tavira/DSCF2836.jpg)
 ![DSCF2837.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244781/Euro_2025_Portugal_Tavira/DSCF2837.jpg)
 ![DSCF2851.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244784/Euro_2025_Portugal_Tavira/DSCF2851.jpg)
 ![DSCF2852.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244786/Euro_2025_Portugal_Tavira/DSCF2852.jpg)
 ![DSCF2855.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244788/Euro_2025_Portugal_Tavira/DSCF2855.jpg)
 ![DSCF2871.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244791/Euro_2025_Portugal_Tavira/DSCF2871.jpg)
+
+---
+
+法羅
+
 ![DSCF2872.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244794/Euro_2025_Portugal_Tavira/DSCF2872.jpg)
 ![DSCF2884.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244798/Euro_2025_Portugal_Tavira/DSCF2884.jpg)
 ![DSCF2887.JPG](https://res.cloudinary.com/dvnesaiv5/image/upload/v1773244802/Euro_2025_Portugal_Tavira/DSCF2887.jpg)
