@@ -1566,5 +1566,63 @@
                 "alt": "DSCF3744.JPG"
             }
         ]
+    },
+    {
+        "id": "test_photo",
+        "title": "測試_相簿",
+        "draft": true,
+        "date": "2026-03-15",
+        "travel_date": "2026-03-15",
+        "cover": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773823841/test_photo/201339970022.jpg",
+        "description": "test 123",
+        "category": "photos",
+        "tags": [
+            "攝影",
+            "旅遊",
+            "日常"
+        ],
+        "city": "Taipei",
+        "country": "Taiwan",
+        "images": [
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773823841/test_photo/201339970022.jpg",
+                "alt": "201339970022.JPEG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773823843/test_photo/201389970005.jpg",
+                "alt": "201389970005.JPEG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773823846/test_photo/201673040006.jpg",
+                "alt": "201673040006.JPEG"
+            }
+        ]
+    },
+    {
+        "id": "test_photo_shared",
+        "title": "測試_相簿_共用",
+        "draft": true,
+        "date": "2026-03-18",
+        "travel_date": "",
+        "cover": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773824683/test_photo_shared/201666840008.jpg",
+        "description": "",
+        "category": "photos",
+        "tags": [],
+        "city": "",
+        "country": "",
+        "images": [
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773824683/test_photo_shared/201666840008.jpg",
+                "alt": "201666840008.JPEG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773824684/test_photo_shared/201673040013.jpg",
+                "alt": "201673040013.JPEG"
+            },
+            {
+                "src": "https://res.cloudinary.com/dvnesaiv5/image/upload/v1773824687/test_photo_shared/201673040034.jpg",
+                "alt": "201673040034.JPEG"
+            }
+        ]
     }
 ]
