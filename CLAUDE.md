@@ -46,6 +46,29 @@ Content pipeline: **Notion → `posts/` or `galleries.json` → Cloudinary → N
 - `CLOUDINARY_*` — image CDN credentials
 - `NOTION_*` — Notion API key + database ID
 
+## Branch Strategy
+
+### Long-term Branches (persistent)
+- **`main`** — Production-ready code, merged from `dev` periodically
+- **`dev`** — Development & infrastructure work (reusable across tasks)
+- **`content`** — Blog posts & photo galleries (reusable across tasks)
+
+### Short-term Feature Branches
+- **`feature/*`** — Single feature per branch (e.g., `feature/dark-mode`)
+- Each feature branch → PR to `main` → delete after merge
+
+### Worktree Workflow (Claude + dev)
+- Each development task: create new worktree from `dev` → work → PR to `dev` → delete worktree
+- Content tasks: create new worktree from `content` → work → PR to `content` → delete worktree
+- Feature work: create new worktree from main → work → PR to `main` → delete worktree
+
+## Git Collaboration Workflow
+- Always work in a dedicated Claude branch created via worktree (e.g., `claude/vibrant-pare`)
+- Workflow: `git add .` → `git commit` → `git push origin [branch]` → Create PR to **target branch** (`dev`, `content`, or `main`)
+- **Never push directly to any protected branch** — all changes go through PR review
+- This ensures clear commit history and gives you opportunity to review changes before merge
+- After merge, the worktree and its branch are deleted
+
 ## Key Conventions
 - Traditional Chinese (繁體中文) content
 - Images served from Cloudinary (`res.cloudinary.com`) — Flickr is being phased out
