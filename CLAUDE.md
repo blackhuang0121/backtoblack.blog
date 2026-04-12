@@ -34,11 +34,36 @@ Category: `photos`
 
 ## Automation Scripts
 
-| Script                        | Purpose                                                                     |
-| ----------------------------- | --------------------------------------------------------------------------- |
-| `notion-database-sync.mjs`    | Notion DB → Markdown posts or gallery JSON                                  |
-| `cloudinary-sync.mjs`         | Compress images (Sharp) → upload to Cloudinary → update markdown/JSON URLs  |
-| `sync-metadata-to-gsheet.cjs` | Post metadata → Google Sheets (triggered by GitHub Actions on push to main) |
+### notion-database-sync.mjs
+從 Notion 同步 Status=Draft 的項目到本地
+
+```bash
+npm run notion-sync                  # 同步所有 Draft（Post → .md, Photo → galleries.json）
+npm run notion-sync -- <id>          # 只同步指定 ID
+```
+
+> `--` 是 npm 的分隔符，後面的參數會傳給 script（等同 `node scripts/notion-database-sync.mjs <id>`）。
+> `<id>` 對應 Notion 頁面的 **ID 欄位**，與本機資料夾名稱無關。
+
+- Post 類型 → 建立 `posts/<id>.md`（含 frontmatter）
+- Photo 類型 → 新增一筆到 `src/app/photos/data/galleries.json`
+- 檔案已存在時會跳過（不覆蓋）
+
+### cloudinary-sync.mjs
+壓縮圖片 → 上傳 Cloudinary → 更新文件
+
+```bash
+npm run cloudinary-sync -- <id>                    # 使用 <id>_selected 資料夾
+npm run cloudinary-sync -- <id> <folderName>       # 使用 <folderName>_selected（共用照片）
+```
+
+- 圖片來源：`~/Pictures/Blog/<folderName>_selected/`
+- 壓縮輸出：`~/Pictures/Blog/Creatives/<folderName>_selected_compressed/`
+- 自動判斷 Post / Photo，分別更新 `.md` 或 `galleries.json`
+- 第一張圖自動設為 `cover`
+
+### sync-metadata-to-gsheet.cjs
+同步元數據到 Google Sheets（由 GitHub Actions 自動觸發，通常不需手動執行）
 
 Content pipeline: **Notion → `posts/` or `galleries.json` → Cloudinary → Next.js build**
 
