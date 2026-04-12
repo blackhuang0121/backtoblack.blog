@@ -69,6 +69,11 @@ Content pipeline: **Notion → `posts/` or `galleries.json` → Cloudinary → N
 - This ensures clear commit history and gives you opportunity to review changes before merge
 - After merge, the worktree and its branch are deleted
 
+## Collaboration
+
+`Cowork.md` 是 Cowork session 與 Code session 的任務交接文件。
+每次 Code session 開始時，請先讀取 `Cowork.md`，確認是否有待執行的任務，完成後將任務移至「已完成」區塊。
+
 ## Key Conventions
 - Traditional Chinese (繁體中文) content
 - Images served from Cloudinary (`res.cloudinary.com`) — Flickr is being phased out
