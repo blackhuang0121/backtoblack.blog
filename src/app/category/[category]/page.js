@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Posts from "@/components/Posts";
-import PhotoGallery from "@/components/PhotoGallery";
+import PhotoGalleryList from "@/components/PhotoGalleryList";
 import { getAllPostsMeta } from "../../posts/[slug]/getAllPostsMeta";
 import galleries from "@/app/photos/data/galleries.json";
 
@@ -13,7 +13,7 @@ export default function CategoryPage({ params }) {
             .filter(g => g.category === "photos")
             .filter(g => g.draft !== true);
         filtered.sort((a, b) => new Date(b.date) - new Date(a.date)); // 時間排序
-        return <PhotoGallery galleries={filtered} title="我的相簿" />;
+        return <PhotoGalleryList galleries={filtered} title="我的相簿" />;
     }
 
     // 文章類，原本的寫法

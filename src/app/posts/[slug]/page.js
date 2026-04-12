@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPostsMeta } from './getAllPostsMeta'; // 或你自己的方法
-import ImageLightbox from "@/components/ImageLightbox";
+import PostImageLightbox from "@/components/PostImageLightbox";
 
 export default function PostPage({ params }) {
     // 取得所有文章 meta 並按發佈日期排序（新到舊）
@@ -26,6 +26,17 @@ export default function PostPage({ params }) {
     const filePath = path.join(process.cwd(), 'posts', `${params.slug}.md`);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
+
+    // 提取文章中的所有圖片
+    const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+    const allImages = [];
+    let match;
+    while ((match = imageRegex.exec(content)) !== null) {
+        allImages.push({
+            src: match[2],
+            alt: match[1] || '',
+        });
+    }
 
     return (
         <>
@@ -74,9 +85,18 @@ export default function PostPage({ params }) {
                     <div className="prose prose-invert max-w-3xl mx-auto">
                         <ReactMarkdown rehypePlugins={[rehypeHighlight]}
                             components={{
-                                img: ({ node, ...props }) => (
-                                    <ImageLightbox src={props.src} alt={props.alt} />
-                                ),
+                                img: ({ node, ...props }) => {
+                                    // 找出當前圖片在所有圖片中的索引
+                                    const currentIndex = allImages.findIndex(img => img.src === props.src);
+                                    return (
+                                        <PostImageLightbox
+                                            src={props.src}
+                                            alt={props.alt}
+                                            allImages={allImages}
+                                            currentIndex={currentIndex >= 0 ? currentIndex : 0}
+                                        />
+                                    );
+                                },
                             }}
                         >{content}</ReactMarkdown>
                     </div>
