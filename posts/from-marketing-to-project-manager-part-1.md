@@ -6,7 +6,7 @@ travel_date: ""
 cover: "/img/BlogSwitchCareer/DSCF2728.JPG"
 description: "以 B2B 行銷專員開啟職涯，而後協助品牌從 0 到 1 打造會員忠誠計劃留住鐵粉。在不同行銷領域中不斷探索工作對於自己的價值，從中找到職涯下一階段方向的那些事。"
 category: "essays"
-tags: ["隨筆", "轉職", "專案經理", "SwitchCareer", "Project Manager", "PM", "Consultant", "B2B", "CDP"]
+tags: ["隨筆", "轉職", "SwitchCareer", "專案經理", "Project Manager"]
 city: "台北"
 country: "台灣"
 ---
