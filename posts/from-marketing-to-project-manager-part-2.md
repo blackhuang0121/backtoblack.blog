@@ -1,6 +1,6 @@
 ---
 title: "「B2B 行銷」到「品牌會員經營」再到「軟體系統導入專案經理」的轉職之路（續）"
-draft: true
+draft: false
 date: "2026-04-12"
 travel_date: ""
 cover: "/img/BlogSwitchCareer/DSCF5161.JPG"
