@@ -10,27 +10,24 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
-
-// 支援單一 DB（NOTION_DATABASE_ID）或分開的 Posts/Photos DB
-const POSTS_DB_ID = process.env.NOTION_POSTS_DB_ID || process.env.NOTION_DATABASE_ID;
-const PHOTOS_DB_ID = process.env.NOTION_PHOTOS_DB_ID || process.env.NOTION_DATABASE_ID;
+const DB_ID = process.env.NOTION_DATABASE_ID;
 
 if (!process.env.NOTION_API_KEY) {
     console.error('❌ 缺少 NOTION_API_KEY 環境變數');
     process.exit(1);
 }
-if (!POSTS_DB_ID || !PHOTOS_DB_ID) {
-    console.error('❌ 缺少 Notion Database ID（NOTION_DATABASE_ID 或 NOTION_POSTS_DB_ID / NOTION_PHOTOS_DB_ID）');
+if (!DB_ID) {
+    console.error('❌ 缺少 NOTION_DATABASE_ID 環境變數');
     process.exit(1);
 }
 
 // 從 Notion Database 取得所有 pages，回傳 { id → pageId } map
-async function buildIdMap(dbId) {
+async function buildIdMap() {
     const map = {};
     let cursor;
     do {
         const resp = await notion.databases.query({
-            database_id: dbId,
+            database_id: DB_ID,
             start_cursor: cursor,
         });
         for (const page of resp.results) {
@@ -62,19 +59,12 @@ function buildPostProperties(meta, id) {
 
 // 建立 Photo 的 Notion properties
 function buildPhotoProperties(gallery) {
-    const imagesJson = JSON.stringify(gallery.images || []);
-    // Notion rich_text 單一 block 上限 2000 字，超出則截斷
-    const imagesContent = imagesJson.length > 1990
-        ? imagesJson.substring(0, 1990) + '…'
-        : imagesJson;
-
     const props = {
         'Title': { title: [{ text: { content: gallery.title || '' } }] },
         'ID': { rich_text: [{ text: { content: gallery.id } }] },
         'Category': gallery.category ? { select: { name: gallery.category } } : { select: null },
         'Tags': { multi_select: (gallery.tags || []).map(t => ({ name: t })) },
         'Description': { rich_text: [{ text: { content: gallery.description || '' } }] },
-        'Images': { rich_text: [{ text: { content: imagesContent } }] },
         'Type': { select: { name: 'Photo' } },
     };
     if (gallery.date) props['Publish Date'] = { date: { start: gallery.date } };
@@ -91,9 +81,9 @@ async function updatePage(pageId, properties) {
 }
 
 // 新增 Notion page
-async function createPage(dbId, properties) {
+async function createPage(properties) {
     await notion.pages.create({
-        parent: { database_id: dbId },
+        parent: { database_id: DB_ID },
         properties,
     });
 }
@@ -125,7 +115,7 @@ async function syncPosts(idMap) {
                 console.log(`✏️  更新: ${id}`);
                 updated++;
             } else {
-                await createPage(POSTS_DB_ID, properties);
+                await createPage(properties);
                 console.log(`➕ 新增: ${id}`);
                 added++;
             }
@@ -161,7 +151,7 @@ async function syncPhotos(idMap) {
                 console.log(`✏️  更新: ${gallery.id}`);
                 updated++;
             } else {
-                await createPage(PHOTOS_DB_ID, properties);
+                await createPage(properties);
                 console.log(`➕ 新增: ${gallery.id}`);
                 added++;
             }
@@ -177,20 +167,11 @@ async function syncPhotos(idMap) {
 async function main() {
     console.log('🔄 開始同步 repo 內容到 Notion Database...');
 
-    // 取得現有 Notion pages
-    const postsMap = await buildIdMap(POSTS_DB_ID);
-    const photosMap = PHOTOS_DB_ID === POSTS_DB_ID ? postsMap : await buildIdMap(PHOTOS_DB_ID);
+    const idMap = await buildIdMap();
+    console.log(`📋 Notion Database: ${Object.keys(idMap).length} pages`);
 
-    const postTotal = Object.keys(postsMap).length;
-    const photoTotal = PHOTOS_DB_ID === POSTS_DB_ID
-        ? '（共用同一 Database）'
-        : `${Object.keys(photosMap).length} pages`;
-
-    console.log(`📋 Notion Posts Database: ${postTotal} pages`);
-    console.log(`📋 Notion Photos Database: ${photoTotal}`);
-
-    const postResult = await syncPosts(postsMap);
-    const photoResult = await syncPhotos(photosMap);
+    const postResult = await syncPosts(idMap);
+    const photoResult = await syncPhotos(idMap);
 
     console.log('\n' + '='.repeat(50));
     console.log('📊 執行結果：');

@@ -26,6 +26,3 @@ jobs:
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-          # 若 Posts / Photos 使用不同 Database，可分別設定以下 Secrets：
-          # NOTION_POSTS_DB_ID: ${{ secrets.NOTION_POSTS_DB_ID }}
-          # NOTION_PHOTOS_DB_ID: ${{ secrets.NOTION_PHOTOS_DB_ID }}
