@@ -10,6 +10,7 @@ dotenv.config();
 
 const API_KEY = process.env.NOTION_API_KEY;
 const DB_ID = process.env.NOTION_DATABASE_ID;
+const SITE_URL = process.env.SITE_URL || 'https://backtoblackblog.vercel.app';
 
 if (!API_KEY) {
     console.error('❌ 缺少 NOTION_API_KEY 環境變數');
@@ -88,7 +89,8 @@ function buildPostProperties(meta, id) {
     if (meta.travel_date) props['Travel Date'] = { date: { start: meta.travel_date } };
     if (meta.city) props['City'] = { select: { name: meta.city } };
     if (meta.country) props['Country'] = { select: { name: meta.country } };
-    if (meta.cover) props['Cover'] = { rich_text: [{ text: { content: meta.cover } }] };
+    if (meta.cover) props['Cover'] = { url: meta.cover };
+    props['URL'] = { url: `${SITE_URL}/posts/${id}` };
     return props;
 }
 
@@ -106,7 +108,8 @@ function buildPhotoProperties(gallery) {
     if (gallery.travel_date) props['Travel Date'] = { date: { start: gallery.travel_date } };
     if (gallery.city) props['City'] = { select: { name: gallery.city } };
     if (gallery.country) props['Country'] = { select: { name: gallery.country } };
-    if (gallery.cover) props['Cover'] = { rich_text: [{ text: { content: gallery.cover } }] };
+    if (gallery.cover) props['Cover'] = { url: gallery.cover };
+    props['URL'] = { url: `${SITE_URL}/photos/${gallery.id}` };
     return props;
 }
 
