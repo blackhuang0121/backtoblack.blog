@@ -1,7 +1,6 @@
 // repo → Notion：將 posts/*.md 和 galleries.json 的 metadata 同步回 Notion Database
 // 只同步 draft=false 的已發佈內容；存在則更新，不存在則新增
 
-import { Client } from '@notionhq/client';
 import matter from 'gray-matter';
 import fs from 'fs';
 import path from 'path';
@@ -9,10 +8,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
+const API_KEY = process.env.NOTION_API_KEY;
 const DB_ID = process.env.NOTION_DATABASE_ID;
 
-if (!process.env.NOTION_API_KEY) {
+if (!API_KEY) {
     console.error('❌ 缺少 NOTION_API_KEY 環境變數');
     process.exit(1);
 }
@@ -21,22 +20,58 @@ if (!DB_ID) {
     process.exit(1);
 }
 
+const NOTION_HEADERS = {
+    'Authorization': `Bearer ${API_KEY}`,
+    'Notion-Version': '2022-06-28',
+    'Content-Type': 'application/json',
+};
+
 // 從 Notion Database 取得所有 pages，回傳 { id → pageId } map
 async function buildIdMap() {
     const map = {};
     let cursor;
     do {
-        const resp = await notion.databases.query({
-            database_id: DB_ID,
-            start_cursor: cursor,
+        const body = cursor ? { start_cursor: cursor } : {};
+        const resp = await fetch(`https://api.notion.com/v1/databases/${DB_ID}/query`, {
+            method: 'POST',
+            headers: NOTION_HEADERS,
+            body: JSON.stringify(body),
         });
-        for (const page of resp.results) {
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(`Notion query 失敗: ${JSON.stringify(data)}`);
+        for (const page of data.results) {
             const id = page.properties['ID']?.rich_text?.[0]?.plain_text;
             if (id) map[id] = page.id;
         }
-        cursor = resp.has_more ? resp.next_cursor : null;
+        cursor = data.has_more ? data.next_cursor : null;
     } while (cursor);
     return map;
+}
+
+// 更新現有 Notion page
+async function updatePage(pageId, properties) {
+    const resp = await fetch(`https://api.notion.com/v1/pages/${pageId}`, {
+        method: 'PATCH',
+        headers: NOTION_HEADERS,
+        body: JSON.stringify({ properties }),
+    });
+    if (!resp.ok) {
+        const data = await resp.json();
+        throw new Error(data.message || JSON.stringify(data));
+    }
+}
+
+// 新增 Notion page
+async function createPage(properties) {
+    const resp = await fetch('https://api.notion.com/v1/pages', {
+        method: 'POST',
+        headers: NOTION_HEADERS,
+        body: JSON.stringify({ parent: { database_id: DB_ID }, properties }),
+    });
+    if (!resp.ok) {
+        const data = await resp.json();
+        throw new Error(data.message || JSON.stringify(data));
+    }
 }
 
 // 建立 Post 的 Notion properties
@@ -53,7 +88,7 @@ function buildPostProperties(meta, id) {
     if (meta.travel_date) props['Travel Date'] = { date: { start: meta.travel_date } };
     if (meta.city) props['City'] = { select: { name: meta.city } };
     if (meta.country) props['Country'] = { select: { name: meta.country } };
-    if (meta.cover) props['Cover'] = { url: meta.cover };
+    if (meta.cover) props['Cover'] = { rich_text: [{ text: { content: meta.cover } }] };
     return props;
 }
 
@@ -71,21 +106,8 @@ function buildPhotoProperties(gallery) {
     if (gallery.travel_date) props['Travel Date'] = { date: { start: gallery.travel_date } };
     if (gallery.city) props['City'] = { select: { name: gallery.city } };
     if (gallery.country) props['Country'] = { select: { name: gallery.country } };
-    if (gallery.cover) props['Cover'] = { url: gallery.cover };
+    if (gallery.cover) props['Cover'] = { rich_text: [{ text: { content: gallery.cover } }] };
     return props;
-}
-
-// 更新現有 Notion page
-async function updatePage(pageId, properties) {
-    await notion.pages.update({ page_id: pageId, properties });
-}
-
-// 新增 Notion page
-async function createPage(properties) {
-    await notion.pages.create({
-        parent: { database_id: DB_ID },
-        properties,
-    });
 }
 
 // 同步所有 Posts
@@ -109,7 +131,6 @@ async function syncPosts(idMap) {
             }
 
             const properties = buildPostProperties(meta, id);
-
             if (idMap[id]) {
                 await updatePage(idMap[id], properties);
                 console.log(`✏️  更新: ${id}`);
@@ -145,7 +166,6 @@ async function syncPhotos(idMap) {
             }
 
             const properties = buildPhotoProperties(gallery);
-
             if (idMap[gallery.id]) {
                 await updatePage(idMap[gallery.id], properties);
                 console.log(`✏️  更新: ${gallery.id}`);
