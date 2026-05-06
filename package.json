@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "notion-sync": "node scripts/notion-database-sync.mjs",
-    "cloudinary-sync": "node scripts/cloudinary-sync.mjs"
+    "cloudinary-sync": "node scripts/cloudinary-sync.mjs",
+    "sync-to-notion": "node scripts/sync-metadata-to-notion-database.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
