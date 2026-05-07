@@ -77,12 +77,18 @@
  *                   country:
  *                     type: string
  *                     example: 中國
+ *       400:
+ *         description: 日期格式錯誤（需為 YYYY-MM-DD）
+ *       404:
+ *         description: 查無符合條件的圖庫
  *       500:
  *         description: 伺服器錯誤
  */
 import { getPhotosList } from "@/lib/notion.js";
 
 export const runtime = "nodejs";
+
+const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 
 export async function GET(request) {
   try {
@@ -93,11 +99,19 @@ export async function GET(request) {
     const publishedAfter = searchParams.get("published_after");
     const publishedBefore = searchParams.get("published_before");
 
+    if (publishedAfter && !DATE_REGEX.test(publishedAfter))
+      return Response.json({ error: "published_after 格式錯誤，請使用 YYYY-MM-DD" }, { status: 400 });
+    if (publishedBefore && !DATE_REGEX.test(publishedBefore))
+      return Response.json({ error: "published_before 格式錯誤，請使用 YYYY-MM-DD" }, { status: 400 });
+
     let photos = await getPhotosList();
 
     if (country) photos = photos.filter((p) => p.country === country);
     if (publishedAfter) photos = photos.filter((p) => p.date >= publishedAfter);
     if (publishedBefore) photos = photos.filter((p) => p.date <= publishedBefore);
+
+    if (photos.length === 0)
+      return Response.json({ error: "查無符合條件的圖庫" }, { status: 404 });
 
     photos = photos.sort((a, b) =>
       sort === "oldest"
