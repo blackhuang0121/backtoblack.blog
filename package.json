@@ -31,6 +31,7 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "sharp": "^0.34.3",
+    "swagger-jsdoc": "^6.2.8",
     "yet-another-react-lightbox": "^3.24.0"
   },
   "devDependencies": {
