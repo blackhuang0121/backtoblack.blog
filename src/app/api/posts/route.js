@@ -17,7 +17,30 @@
  *         schema:
  *           type: string
  *           enum: [newest, oldest]
- *         description: 排序方式（預設：newest）
+ *         description: 依發布日期排序（預設：newest）
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *           enum: [trips, essays]
+ *         description: 篩選分類
+ *       - in: query
+ *         name: country
+ *         schema:
+ *           type: string
+ *         description: 篩選國家（需完全符合，例如：荷蘭）
+ *       - in: query
+ *         name: published_after
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: 篩選發布日期在此日期之後（含）
+ *       - in: query
+ *         name: published_before
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: 篩選發布日期在此日期之前（含）
  *     responses:
  *       200:
  *         description: 成功取得文章列表
@@ -30,31 +53,36 @@
  *                 properties:
  *                   id:
  *                     type: string
- *                     example: post-001
+ *                     example: rotterdam-windmill
  *                   title:
  *                     type: string
- *                     example: 日本之旅
+ *                     example: 荷蘭｜鹿特丹小孩堤坊與白色風車
  *                   date:
  *                     type: string
  *                     format: date
- *                     example: 2026-01-15
+ *                     example: "2024-07-09"
  *                   description:
  *                     type: string
+ *                     example: 萊登到鹿特丹，初訪小孩堤坊的多重風車群，騎單車、拍照片與搭公車的日常。
  *                   cover:
  *                     type: string
  *                     format: uri
- *                     example: https://res.cloudinary.com/...
+ *                     example: https://live.staticflickr.com/65535/53976641147_443bbea667_b.jpg
  *                   category:
  *                     type: string
  *                     enum: [trips, essays]
+ *                     example: trips
  *                   tags:
  *                     type: array
  *                     items:
  *                       type: string
+ *                     example: [歐洲, 荷蘭, 鹿特丹, 風車]
  *                   city:
  *                     type: string
+ *                     example: 鹿特丹
  *                   country:
  *                     type: string
+ *                     example: 荷蘭
  *       500:
  *         description: 伺服器錯誤
  */
@@ -67,8 +95,17 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const limit = searchParams.get("limit");
     const sort = searchParams.get("sort") || "newest";
+    const category = searchParams.get("category");
+    const country = searchParams.get("country");
+    const publishedAfter = searchParams.get("published_after");
+    const publishedBefore = searchParams.get("published_before");
 
     let posts = await getPostsList();
+
+    if (category) posts = posts.filter((p) => p.category === category);
+    if (country) posts = posts.filter((p) => p.country === country);
+    if (publishedAfter) posts = posts.filter((p) => p.date >= publishedAfter);
+    if (publishedBefore) posts = posts.filter((p) => p.date <= publishedBefore);
 
     posts = posts.sort((a, b) =>
       sort === "oldest"
