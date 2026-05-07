@@ -134,9 +134,9 @@ export async function GET(request) {
     const publishedBefore = searchParams.get("published_before");
 
     if (publishedAfter && !DATE_REGEX.test(publishedAfter))
-      return Response.json({ error: "published_after 格式錯誤，請使用 YYYY-MM-DD" }, { status: 400 });
+      return Response.json({ error: "published_after 格式錯誤，請使用 YYYY-MM-DD", status: 400 }, { status: 400 });
     if (publishedBefore && !DATE_REGEX.test(publishedBefore))
-      return Response.json({ error: "published_before 格式錯誤，請使用 YYYY-MM-DD" }, { status: 400 });
+      return Response.json({ error: "published_before 格式錯誤，請使用 YYYY-MM-DD", status: 400 }, { status: 400 });
 
     let posts = await getPostsList();
 
@@ -146,7 +146,7 @@ export async function GET(request) {
     if (publishedBefore) posts = posts.filter((p) => p.date <= publishedBefore);
 
     if (posts.length === 0)
-      return Response.json({ error: "查無符合條件的文章" }, { status: 404 });
+      return Response.json({ error: "查無符合條件的文章", status: 404 }, { status: 404 });
 
     posts = posts.sort((a, b) =>
       sort === "oldest"
@@ -159,6 +159,6 @@ export async function GET(request) {
     return Response.json(posts);
   } catch (error) {
     console.error("Error fetching posts:", error);
-    return Response.json({ error: "Failed to fetch posts" }, { status: 500 });
+    return Response.json({ error: "Failed to fetch posts", status: 500 }, { status: 500 });
   }
 }

@@ -127,9 +127,9 @@ export async function GET(request) {
     const publishedBefore = searchParams.get("published_before");
 
     if (publishedAfter && !DATE_REGEX.test(publishedAfter))
-      return Response.json({ error: "published_after 格式錯誤，請使用 YYYY-MM-DD" }, { status: 400 });
+      return Response.json({ error: "published_after 格式錯誤，請使用 YYYY-MM-DD", status: 400 }, { status: 400 });
     if (publishedBefore && !DATE_REGEX.test(publishedBefore))
-      return Response.json({ error: "published_before 格式錯誤，請使用 YYYY-MM-DD" }, { status: 400 });
+      return Response.json({ error: "published_before 格式錯誤，請使用 YYYY-MM-DD", status: 400 }, { status: 400 });
 
     let photos = await getPhotosList();
 
@@ -138,7 +138,7 @@ export async function GET(request) {
     if (publishedBefore) photos = photos.filter((p) => p.date <= publishedBefore);
 
     if (photos.length === 0)
-      return Response.json({ error: "查無符合條件的圖庫" }, { status: 404 });
+      return Response.json({ error: "查無符合條件的圖庫", status: 404 }, { status: 404 });
 
     photos = photos.sort((a, b) =>
       sort === "oldest"
@@ -151,6 +151,6 @@ export async function GET(request) {
     return Response.json(photos);
   } catch (error) {
     console.error("Error fetching photos:", error);
-    return Response.json({ error: "Failed to fetch photos" }, { status: 500 });
+    return Response.json({ error: "Failed to fetch photos", status: 500 }, { status: 500 });
   }
 }
