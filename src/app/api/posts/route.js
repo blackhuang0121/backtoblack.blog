@@ -85,10 +85,37 @@
  *                     example: 荷蘭
  *       400:
  *         description: 日期格式錯誤（需為 YYYY-MM-DD）
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *             example:
+ *               error: "published_after 格式錯誤，請使用 YYYY-MM-DD"
  *       404:
  *         description: 查無符合條件的文章
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *             example:
+ *               error: "查無符合條件的文章"
  *       500:
  *         description: 伺服器錯誤
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *             example:
+ *               error: "Failed to fetch posts"
  */
 import { getPostsList } from "@/lib/notion.js";
 
