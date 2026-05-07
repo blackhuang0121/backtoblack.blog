@@ -6,7 +6,7 @@ const options = {
     openapi: "3.0.0",
     info: {
       title: "backtoblack.blog API",
-      version: "1.0.0",
+      version: "1.0.1",
       description: "部落格內容的 Open API 資源，提供文章與相簿資料",
     },
     tags: [{ name: "Posts" }, { name: "Photos" }],
